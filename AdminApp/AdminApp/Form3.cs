@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace AdminApp
 {
-    public partial class Form2 : Form
+    public partial class Form3 : Form
     {
-        public Form2()
+        public Form3()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form3 form3 = new Form3();
-            form3.Show();
-            this.Hide();
         }
     }
 }

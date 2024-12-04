@@ -41,3 +41,4 @@ C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\obj\Debug\AdminApp.csproj.Cor
 C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\obj\Debug\AdminApp.csproj.Up2Date
 C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\obj\Debug\AdminApp.exe
 C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\obj\Debug\AdminApp.pdb
+C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\obj\Debug\AdminApp.Form2.resources
