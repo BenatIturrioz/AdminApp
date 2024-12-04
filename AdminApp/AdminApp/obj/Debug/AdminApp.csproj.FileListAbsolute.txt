@@ -42,3 +42,14 @@ C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\obj\Debug\AdminApp.csproj.Up2
 C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\obj\Debug\AdminApp.exe
 C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\obj\Debug\AdminApp.pdb
 C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\obj\Debug\AdminApp.Form2.resources
+C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\bin\Debug\Antlr3.Runtime.dll
+C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\bin\Debug\Iesi.Collections.dll
+C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\bin\Debug\NHibernate.dll
+C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\bin\Debug\Remotion.Linq.dll
+C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\bin\Debug\Remotion.Linq.EagerFetching.dll
+C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\bin\Debug\Antlr3.Runtime.xml
+C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\bin\Debug\Iesi.Collections.xml
+C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\bin\Debug\NHibernate.xml
+C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\bin\Debug\Remotion.Linq.xml
+C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\bin\Debug\Remotion.Linq.EagerFetching.xml
+C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\obj\Debug\AdminApp.Form3.resources
