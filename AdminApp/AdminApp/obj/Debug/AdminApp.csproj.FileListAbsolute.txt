@@ -53,3 +53,5 @@ C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\bin\Debug\NHibernate.xml
 C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\bin\Debug\Remotion.Linq.xml
 C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\bin\Debug\Remotion.Linq.EagerFetching.xml
 C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\obj\Debug\AdminApp.Form3.resources
+C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\obj\Debug\AdminApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\obj\Debug\AdminApp.exe.config
