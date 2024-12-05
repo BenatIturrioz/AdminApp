@@ -12,7 +12,7 @@
 		<property name="Prezioa" column="prezioa" type="float"/>
 		<property name="ErosketaPrezioa" column="erosketaPrezioa" type="float"/>
 		<property name="Kantitatea" column="kantitatea" type="int"/>
-		<property name="KantitateMin" column="kantitateaMinimoa" type="int"/>
+		<property name="KantitateMin" column="kantitateMinimoa" type="int"/>
 		<property name="Mota" column="mota" type="int"/>
 	</class>
 </hibernate-mapping>
