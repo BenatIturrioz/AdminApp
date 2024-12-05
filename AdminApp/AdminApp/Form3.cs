@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdminApp.Dominio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -71,6 +72,39 @@ namespace AdminApp
             textBoxDeskribapenaEguneratu.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             textBoxDeskribapenaEzabatu.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Konfigurazioa sortzen da BD-arekin konektatzeko app.config-en definitzen dena.
+            myConfiguration = new NHibernate.Cfg.Configuration();
+            myConfiguration.Configure();
+            mySessionFactory = myConfiguration.BuildSessionFactory();
+            mySession = mySessionFactory.OpenSession();
+            using (var transaction = mySession.BeginTransaction())
+            {
+                try
+                {
+                    Produktua produktua = new Produktua
+                    {
+                        Izena = Convert.ToString(textBoxIzenaGehitu.Text),
+                        Deskribapena = Convert.ToString(textBoxDeskribapenaGehitu.Text),
+                        Prezioa = Convert.ToSingle(textBoxPrezioaGehitu.Text),
+                        ErosketaPrezioa = Convert.ToSingle(textBoxErosketaPrezioaGehitu.Text),
+                        Mota = Convert.ToInt16(textBoxMotaGehitu.Text),
+                        Kantitatea = Convert.ToInt16(textBoxKantitateaGehitu.Text),
+                        KantitateMin = Convert.ToInt16(textBoxKantitateMinGehitu.Text)
+                    };
+                    mySession.Save(produktua);
+                    transaction.Commit();  // Asegúrate de confirmar la transacción
+                    MessageBox.Show("Produktua ongi gehituta.");
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();  // Si hay un error, revierte la transacción
+                    MessageBox.Show("Errorkaixo: " + ex.Message);
+                }
+            }
         }
     }
 }
