@@ -119,6 +119,12 @@ namespace AdminApp
 
             using (var transaction = mySession.BeginTransaction())
             {
+
+                DialogResult confirmacion = MessageBox.Show(
+                "Seguru zaude produktua ezabatu nahi duzula?",
+                "Konfirmazioa",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
                 try
                 {
                     // Cargar el objeto "frutak" a eliminar, basándote en alguna propiedad única
