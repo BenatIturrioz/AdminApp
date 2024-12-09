@@ -112,7 +112,39 @@ namespace AdminApp
 
         private void button3_Click(object sender, EventArgs e)
         {
+            myConfiguration = new NHibernate.Cfg.Configuration();
+            myConfiguration.Configure();
+            mySessionFactory = myConfiguration.BuildSessionFactory();
+            mySession = mySessionFactory.OpenSession();
 
+            using (var transaction = mySession.BeginTransaction())
+            {
+                try
+                {
+                    // Cargar el objeto "frutak" a eliminar, basándote en alguna propiedad única
+                    int id = Convert.ToInt32(textBoxIdEzabatu.Text); // Id de la fruta a buscar
+                    var produktuaEzabatu = mySession.Query<Produktua>()
+                                                  .FirstOrDefault(f => f.Id == id);
+
+
+                    if (produktuaEzabatu != null)
+                    {
+                        // Si existe, elimínalo de la base de datos
+                        mySession.Delete(produktuaEzabatu);
+                        transaction.Commit();  // Confirmar la transacción para aplicar el cambio
+                        MessageBox.Show("Produktua ongi ezabatua izan da.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Produktuaren id-a ezin izan da bilatu.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();  // Revertir la transacción en caso de error
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -127,7 +159,7 @@ namespace AdminApp
                 try
                 {
                     // Obtener el ID de la fruta a actualizar
-                    int id = Convert.ToInt32(textBoxIdEguneratu.Text); ; // ID de la fruta a buscar
+                    int id = Convert.ToInt32(textBoxIdEguneratu.Text);  // ID de la fruta a buscar
 
                     // Buscar el objeto "frutak" en la base de datos
                     var produktuaEgunertau = mySession.Query<Produktua>()
