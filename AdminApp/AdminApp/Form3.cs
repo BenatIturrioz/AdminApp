@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using NHibernate;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AdminApp
 {
@@ -71,6 +72,8 @@ namespace AdminApp
             textBoxKantitateMinEzabatu.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
             textBoxDeskribapenaEguneratu.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             textBoxDeskribapenaEzabatu.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            textBoxIdEguneratu.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            textBoxIdEzabatu.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
 
         }
 
@@ -105,6 +108,65 @@ namespace AdminApp
                     MessageBox.Show("Errorkaixo: " + ex.Message);
                 }
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            myConfiguration = new NHibernate.Cfg.Configuration();
+            myConfiguration.Configure();
+            mySessionFactory = myConfiguration.BuildSessionFactory();
+            mySession = mySessionFactory.OpenSession();
+
+            using (var transaction = mySession.BeginTransaction())
+            {
+                try
+                {
+                    // Obtener el ID de la fruta a actualizar
+                    int id = Convert.ToInt32(textBoxIdEguneratu.Text); ; // ID de la fruta a buscar
+
+                    // Buscar el objeto "frutak" en la base de datos
+                    var produktuaEgunertau = mySession.Query<Produktua>()
+                                                    .FirstOrDefault(f => f.Id == id);
+
+                    if (produktuaEgunertau != null)
+                    {
+                        // Actualizar los campos del objeto "frutak" con los valores de los TextBox
+                        produktuaEgunertau.Izena = textBoxIzenaEguneratu.Text;                // Asignar el valor del TextBox "izena"
+                        produktuaEgunertau.Deskribapena = textBoxDeskribapenaEguneratu.Text;  // Convertir y asignar el valor de "stock"
+                        produktuaEgunertau.Prezioa = Convert.ToInt32(textBoxPrezioaEguneratu.Text);// Convertir y asignar el valor de "prezioa"
+                        produktuaEgunertau.ErosketaPrezioa = Convert.ToInt32(textBoxErosketaPrezioaEguneratu.Text);  // Convertir y asignar el valor de "stock"
+                        produktuaEgunertau.Kantitatea = Convert.ToInt32(textBoxKantitateaEguneratu.Text);  // Convertir y asignar el valor de "stock"
+                        produktuaEgunertau.KantitateMin = Convert.ToInt32(textBoxKantitateMinEguneratu.Text);  // Convertir y asignar el valor de "stock"
+                        produktuaEgunertau.Mota = Convert.ToInt32(textBoxMotaEguneratu.Text);  // Convertir y asignar el valor de "stock"
+
+
+                        // Guardar los cambios en la base de datos
+                        mySession.Update(produktuaEgunertau);
+                        transaction.Commit();  // Confirmar la transacción
+
+                        MessageBox.Show("Produktua ondo eguneratu da.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Produktua ezin izan da bilatu");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();  // Revertir la transacción en caso de error
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
