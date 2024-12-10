@@ -36,7 +36,7 @@
             this.textBoxErosketaPrezioa = new System.Windows.Forms.TextBox();
             this.textBoxKantMin = new System.Windows.Forms.TextBox();
             this.textBoxKantitatea = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxErosketaKant = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,6 +44,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.listBoxCarrito = new System.Windows.Forms.ListBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.SASKIA = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -61,12 +64,13 @@
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button4.Location = new System.Drawing.Point(12, 12);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(181, 72);
             this.button4.TabIndex = 10;
             this.button4.Text = "ATZERA";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // groupBox1
@@ -79,7 +83,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.textBoxErosketaKant);
             this.groupBox1.Controls.Add(this.textBoxKantitatea);
             this.groupBox1.Controls.Add(this.textBoxKantMin);
             this.groupBox1.Controls.Add(this.textBoxErosketaPrezioa);
@@ -90,7 +94,7 @@
             this.groupBox1.Size = new System.Drawing.Size(1824, 274);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Erosteko Produktua";
+            this.groupBox1.Text = "EROSTEKO PRODUKTUA";
             // 
             // textBoxIzena
             // 
@@ -132,12 +136,12 @@
             this.textBoxKantitatea.Size = new System.Drawing.Size(172, 31);
             this.textBoxKantitatea.TabIndex = 4;
             // 
-            // textBox6
+            // textBoxErosketaKant
             // 
-            this.textBox6.Location = new System.Drawing.Point(1376, 96);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(172, 31);
-            this.textBox6.TabIndex = 5;
+            this.textBoxErosketaKant.Location = new System.Drawing.Point(1376, 96);
+            this.textBoxErosketaKant.Name = "textBoxErosketaKant";
+            this.textBoxErosketaKant.Size = new System.Drawing.Size(172, 31);
+            this.textBoxErosketaKant.TabIndex = 5;
             // 
             // label1
             // 
@@ -202,12 +206,48 @@
             this.button1.TabIndex = 12;
             this.button1.Text = "EROSKETA SASKIAN SARTU";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // listBoxCarrito
+            // 
+            this.listBoxCarrito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.listBoxCarrito.FormattingEnabled = true;
+            this.listBoxCarrito.ItemHeight = 25;
+            this.listBoxCarrito.Location = new System.Drawing.Point(325, 1104);
+            this.listBoxCarrito.Name = "listBoxCarrito";
+            this.listBoxCarrito.Size = new System.Drawing.Size(1824, 279);
+            this.listBoxCarrito.TabIndex = 12;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button2.Location = new System.Drawing.Point(1948, 1128);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(180, 225);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "EROSKETA EGITERA BIDALI";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // SASKIA
+            // 
+            this.SASKIA.AutoSize = true;
+            this.SASKIA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.SASKIA.Location = new System.Drawing.Point(320, 1077);
+            this.SASKIA.Name = "SASKIA";
+            this.SASKIA.Size = new System.Drawing.Size(207, 25);
+            this.SASKIA.TabIndex = 14;
+            this.SASKIA.Text = "EROSKETA SASKIA";
             // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(2534, 1529);
+            this.Controls.Add(this.SASKIA);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.listBoxCarrito);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.dataGridView1);
@@ -218,6 +258,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -232,12 +273,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxErosketaKant;
         private System.Windows.Forms.TextBox textBoxKantitatea;
         private System.Windows.Forms.TextBox textBoxKantMin;
         private System.Windows.Forms.TextBox textBoxErosketaPrezioa;
         private System.Windows.Forms.TextBox textBoxPrezioa;
         private System.Windows.Forms.TextBox textBoxIzena;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListBox listBoxCarrito;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label SASKIA;
     }
 }

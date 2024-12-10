@@ -21,6 +21,8 @@ namespace AdminApp
             this.WindowState = FormWindowState.Maximized;
         }
 
+        private List<Produktua> carrito = new List<Produktua>();
+
         private NHibernate.Cfg.Configuration myConfiguration;
         private ISessionFactory mySessionFactory;
         private ISession mySession;
@@ -113,6 +115,93 @@ namespace AdminApp
             textBoxKantitatea.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             
            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string izena = textBoxIzena.Text;
+            float erosPrezioa = Convert.ToSingle(textBoxErosketaPrezioa.Text);
+            int kantitatea = Convert.ToInt32(textBoxKantitatea.Text);
+            int cantidadMinima = Convert.ToInt32(textBoxKantMin.Text);
+            int erosketaKantitatea = Convert.ToInt32(textBoxErosketaKant.Text);
+
+            Produktua producto = new Produktua
+            {
+                Izena = izena,
+                ErosketaPrezioa = erosPrezioa,
+                Kantitatea = kantitatea,
+                KantitateMin = cantidadMinima,
+                ErosketaKantitatea = erosketaKantitatea
+            };
+
+            carrito.Add(producto);
+
+            listBoxCarrito.Items.Add($"{producto.Izena} - {producto.ErosketaPrezioa}€ x {producto.ErosketaKantitatea} = {producto.ErosketaPrezioa * producto.ErosketaKantitatea}€");
+
+            textBoxIzena.Clear();
+            textBoxPrezioa.Clear();
+            textBoxKantitatea.Clear();
+            textBoxErosketaPrezioa .Clear();
+            textBoxKantMin.Clear();
+            textBoxErosketaKant.Clear();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Recorremos todos los elementos del ListBox (productos en el carrito)
+            foreach (var item in listBoxCarrito.SelectedItems)
+            {
+                string itemText = item.ToString();
+
+                // Parseamos la cadena del ListBox
+                string[] itemParts = itemText.Split(new string[] { " - ", " x " }, StringSplitOptions.None);
+
+                if (itemParts.Length >= 3)
+                {
+                    string productName = itemParts[0]; // Nombre del producto
+                    float productPrice = Convert.ToSingle(itemParts[1].Replace("€", "").Trim()); // Precio del producto
+                    int cantidadEnListBox = Convert.ToInt32(itemParts[2].Split(' ')[0]); // La cantidad actual en el ListBox
+                    int erosketaKantitatea = Convert.ToInt32(textBoxErosketaKant.Text); // La cantidad a sumar desde el TextBox
+
+                    // Calcular la nueva cantidad
+                    int nuevaCantidad = cantidadEnListBox + erosketaKantitatea;
+
+                    // Realizar la actualización en la base de datos
+                    string query = "UPDATE produktua SET kantitatea = @nuevaCantidad WHERE izena = @productName";
+
+                    try
+                    {
+
+                        Connection connection = new Connection();
+                        // Realizar la conexión a la base de datos y ejecutar la actualización
+                        using (MySqlConnection konexioa = connection.GetConnection())
+                        {
+                            konexioa.Open();
+                            using (MySqlCommand cmd = new MySqlCommand(query, konexioa))
+                            {
+                                // Definir los parámetros para la consulta
+                                cmd.Parameters.AddWithValue("@nuevaCantidad", nuevaCantidad);
+                                cmd.Parameters.AddWithValue("@productName", productName);
+
+                                // Ejecutar la consulta
+                                cmd.ExecuteNonQuery();
+                            }
+                        }
+
+                        // Actualizar el texto del ListBox con la nueva cantidad
+                        int index = listBoxCarrito.Items.IndexOf(item);
+                        listBoxCarrito.Items[index] = $"{productName} - {productPrice}€ x {nuevaCantidad} = {productPrice * nuevaCantidad}€";
+
+                        // Opcional: Mostrar un mensaje de éxito
+                        MessageBox.Show($"La cantidad de '{productName}' ha sido actualizada a {nuevaCantidad}.");
+                    }
+                    catch (Exception ex)
+                    {
+                        // Manejo de errores
+                        MessageBox.Show("Error al actualizar la base de datos: " + ex.Message);
+                    }
+                }
+            }
         }
     }
 }

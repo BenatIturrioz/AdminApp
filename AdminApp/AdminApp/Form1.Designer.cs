@@ -51,17 +51,20 @@
             // 
             // saioaHasiButton
             // 
+            this.saioaHasiButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.saioaHasiButton.Location = new System.Drawing.Point(418, 464);
             this.saioaHasiButton.Name = "saioaHasiButton";
             this.saioaHasiButton.Size = new System.Drawing.Size(346, 71);
             this.saioaHasiButton.TabIndex = 2;
             this.saioaHasiButton.Text = "SAIOA HASI";
-            this.saioaHasiButton.UseVisualStyleBackColor = true;
+            this.saioaHasiButton.UseVisualStyleBackColor = false;
             this.saioaHasiButton.Click += new System.EventHandler(this.saioaHasiButton_Click_1);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(323, 269);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(177, 25);
@@ -71,6 +74,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label2.Location = new System.Drawing.Point(323, 355);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(134, 25);
@@ -81,6 +85,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1196, 595);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
