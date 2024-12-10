@@ -46,6 +46,8 @@
             this.textBoxMotaGehitu = new System.Windows.Forms.TextBox();
             this.textBoxIzenaGehitu = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBoxIdEguneratu = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -62,7 +64,9 @@
             this.textBoxMotaEguneratu = new System.Windows.Forms.TextBox();
             this.textBoxIzenaEguneratu = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.textBoxIdEzabatu = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -77,10 +81,7 @@
             this.textBoxPrezioaEzabatu = new System.Windows.Forms.TextBox();
             this.textBoxMotaEzabatu = new System.Windows.Forms.TextBox();
             this.textBoxIzenaEzabatu = new System.Windows.Forms.TextBox();
-            this.textBoxIdEguneratu = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.textBoxIdEzabatu = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -274,6 +275,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Produktua eguneratu";
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(430, 33);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(35, 25);
+            this.label22.TabIndex = 21;
+            this.label22.Text = "Id:";
+            this.label22.Click += new System.EventHandler(this.label22_Click);
+            // 
+            // textBoxIdEguneratu
+            // 
+            this.textBoxIdEguneratu.Enabled = false;
+            this.textBoxIdEguneratu.Location = new System.Drawing.Point(471, 30);
+            this.textBoxIdEguneratu.Name = "textBoxIdEguneratu";
+            this.textBoxIdEguneratu.Size = new System.Drawing.Size(47, 31);
+            this.textBoxIdEguneratu.TabIndex = 20;
+            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -425,6 +444,16 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Produktua ezabatu";
             // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Enabled = false;
+            this.label23.Location = new System.Drawing.Point(432, 33);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(35, 25);
+            this.label23.TabIndex = 23;
+            this.label23.Text = "Id:";
+            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -433,6 +462,14 @@
             this.label21.Size = new System.Drawing.Size(151, 25);
             this.label21.TabIndex = 20;
             this.label21.Text = "Deskribapena:";
+            // 
+            // textBoxIdEzabatu
+            // 
+            this.textBoxIdEzabatu.Enabled = false;
+            this.textBoxIdEzabatu.Location = new System.Drawing.Point(473, 30);
+            this.textBoxIdEzabatu.Name = "textBoxIdEzabatu";
+            this.textBoxIdEzabatu.Size = new System.Drawing.Size(47, 31);
+            this.textBoxIdEzabatu.TabIndex = 22;
             // 
             // label18
             // 
@@ -549,47 +586,22 @@
             this.textBoxIzenaEzabatu.Size = new System.Drawing.Size(234, 31);
             this.textBoxIzenaEzabatu.TabIndex = 0;
             // 
-            // textBoxIdEguneratu
+            // button4
             // 
-            this.textBoxIdEguneratu.Enabled = false;
-            this.textBoxIdEguneratu.Location = new System.Drawing.Point(471, 30);
-            this.textBoxIdEguneratu.Name = "textBoxIdEguneratu";
-            this.textBoxIdEguneratu.Size = new System.Drawing.Size(47, 31);
-            this.textBoxIdEguneratu.TabIndex = 20;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(430, 33);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(35, 25);
-            this.label22.TabIndex = 21;
-            this.label22.Text = "Id:";
-            this.label22.Click += new System.EventHandler(this.label22_Click);
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Enabled = false;
-            this.label23.Location = new System.Drawing.Point(432, 33);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(35, 25);
-            this.label23.TabIndex = 23;
-            this.label23.Text = "Id:";
-            // 
-            // textBoxIdEzabatu
-            // 
-            this.textBoxIdEzabatu.Enabled = false;
-            this.textBoxIdEzabatu.Location = new System.Drawing.Point(473, 30);
-            this.textBoxIdEzabatu.Name = "textBoxIdEzabatu";
-            this.textBoxIdEzabatu.Size = new System.Drawing.Size(47, 31);
-            this.textBoxIdEzabatu.TabIndex = 22;
+            this.button4.Location = new System.Drawing.Point(12, 12);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(181, 72);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "ATZERA";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2534, 1529);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -663,5 +675,6 @@
         private System.Windows.Forms.TextBox textBoxIdEguneratu;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox textBoxIdEzabatu;
+        private System.Windows.Forms.Button button4;
     }
 }
