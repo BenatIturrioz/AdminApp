@@ -103,5 +103,16 @@ namespace AdminApp
             form2.Show();
             this.Close();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBoxIzena.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            textBoxPrezioa.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            textBoxErosketaPrezioa.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            textBoxKantMin.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            textBoxKantitatea.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            
+           
+        }
     }
 }
