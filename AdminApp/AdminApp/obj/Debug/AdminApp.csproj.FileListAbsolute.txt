@@ -55,3 +55,4 @@ C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\bin\Debug\Remotion.Linq.Eager
 C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\obj\Debug\AdminApp.Form3.resources
 C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\obj\Debug\AdminApp.csproj.SuggestedBindingRedirects.cache
 C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\obj\Debug\AdminApp.exe.config
+C:\Users\Beñat\Desktop\AdminApp\AdminApp\AdminApp\obj\Debug\AdminApp.Form4.resources
