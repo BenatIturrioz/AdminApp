@@ -15,17 +15,21 @@ namespace AdminApp
 {
     public partial class Form4 : Form
     {
+        private NHibernate.Cfg.Configuration myConfiguration;
+        private ISessionFactory mySessionFactory;
+        private ISession mySession;
+
+        private List<Produktua> carrito = new List<Produktua>();
+
         public Form4()
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
         }
 
-        private List<Produktua> carrito = new List<Produktua>();
+        
 
-        private NHibernate.Cfg.Configuration myConfiguration;
-        private ISessionFactory mySessionFactory;
-        private ISession mySession;
+        
 
         private void Form4_Load(object sender, EventArgs e)
         {
@@ -58,8 +62,15 @@ namespace AdminApp
             }
         }
 
+        
+
         private void LoadDataGridView()
         {
+            myConfiguration = new NHibernate.Cfg.Configuration();
+            myConfiguration.Configure();
+            mySessionFactory = myConfiguration.BuildSessionFactory(); 
+            mySession = mySessionFactory.OpenSession();
+
             using (var session = mySessionFactory.OpenSession())
             {
                 var produktuak = session.Query<Produktua>().ToList();
@@ -148,59 +159,37 @@ namespace AdminApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // Recorremos todos los elementos del ListBox (productos en el carrito)
-            foreach (var item in listBoxCarrito.SelectedItems)
+            try
             {
-                string itemText = item.ToString();
+                Connection connection = new Connection();
 
-                // Parseamos la cadena del ListBox
-                string[] itemParts = itemText.Split(new string[] { " - ", " x " }, StringSplitOptions.None);
-
-                if (itemParts.Length >= 3)
+                using (MySqlConnection konexioa = connection.GetConnection())
                 {
-                    string productName = itemParts[0]; // Nombre del producto
-                    float productPrice = Convert.ToSingle(itemParts[1].Replace("€", "").Trim()); // Precio del producto
-                    int cantidadEnListBox = Convert.ToInt32(itemParts[2].Split(' ')[0]); // La cantidad actual en el ListBox
-                    int erosketaKantitatea = Convert.ToInt32(textBoxErosketaKant.Text); // La cantidad a sumar desde el TextBox
-
-                    // Calcular la nueva cantidad
-                    int nuevaCantidad = cantidadEnListBox + erosketaKantitatea;
-
-                    // Realizar la actualización en la base de datos
-                    string query = "UPDATE produktua SET kantitatea = @nuevaCantidad WHERE izena = @productName";
-
-                    try
+                    konexioa.Open();
+                    foreach (var producto in carrito)
                     {
-
-                        Connection connection = new Connection();
-                        // Realizar la conexión a la base de datos y ejecutar la actualización
-                        using (MySqlConnection konexioa = connection.GetConnection())
+                        string query = "UPDATE produktua SET kantitatea = kantitatea + @erosketaKantitatea WHERE izena = @izena";
+                        using (MySqlCommand cmd = new MySqlCommand(query, konexioa))
                         {
-                            konexioa.Open();
-                            using (MySqlCommand cmd = new MySqlCommand(query, konexioa))
-                            {
-                                // Definir los parámetros para la consulta
-                                cmd.Parameters.AddWithValue("@nuevaCantidad", nuevaCantidad);
-                                cmd.Parameters.AddWithValue("@productName", productName);
+                            cmd.Parameters.AddWithValue("@erosketaKantitatea", producto.ErosketaKantitatea);
+                            cmd.Parameters.AddWithValue("@izena", producto.Izena);
 
-                                // Ejecutar la consulta
-                                cmd.ExecuteNonQuery();
-                            }
+                            cmd.ExecuteNonQuery();
                         }
-
-                        // Actualizar el texto del ListBox con la nueva cantidad
-                        int index = listBoxCarrito.Items.IndexOf(item);
-                        listBoxCarrito.Items[index] = $"{productName} - {productPrice}€ x {nuevaCantidad} = {productPrice * nuevaCantidad}€";
-
-                        // Opcional: Mostrar un mensaje de éxito
-                        MessageBox.Show($"La cantidad de '{productName}' ha sido actualizada a {nuevaCantidad}.");
                     }
-                    catch (Exception ex)
-                    {
-                        // Manejo de errores
-                        MessageBox.Show("Error al actualizar la base de datos: " + ex.Message);
-                    }
+
+                    MessageBox.Show("Compra realizada con éxito. Las cantidades han sido actualizadas.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    
+
+                    // Limpiar el carrito y la lista visual
+                    carrito.Clear();
+                    listBoxCarrito.Items.Clear();
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al realizar la compra: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
