@@ -27,11 +27,7 @@ namespace AdminApp
             this.WindowState = FormWindowState.Maximized;
         }
 
-        
-
-        
-
-        private void Form4_Load(object sender, EventArgs e)
+        private void taulaKargatu()
         {
             try
             {
@@ -62,21 +58,11 @@ namespace AdminApp
             }
         }
 
-        
-
-        private void LoadDataGridView()
+        private void Form4_Load(object sender, EventArgs e)
         {
-            myConfiguration = new NHibernate.Cfg.Configuration();
-            myConfiguration.Configure();
-            mySessionFactory = myConfiguration.BuildSessionFactory(); 
-            mySession = mySessionFactory.OpenSession();
-
-            using (var session = mySessionFactory.OpenSession())
-            {
-                var produktuak = session.Query<Produktua>().ToList();
-                dataGridView1.DataSource = produktuak;
-            }
+            taulaKargatu();
         }
+
 
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -180,12 +166,15 @@ namespace AdminApp
 
                     MessageBox.Show("Compra realizada con éxito. Las cantidades han sido actualizadas.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    
-
                     // Limpiar el carrito y la lista visual
                     carrito.Clear();
                     listBoxCarrito.Items.Clear();
-                }
+
+                    taulaKargatu();
+
+
+
+                } 
             }
             catch (Exception ex)
             {
