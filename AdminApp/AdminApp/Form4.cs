@@ -87,6 +87,16 @@ namespace AdminApp
                         row.DefaultCellStyle.BackColor = Color.Red; // Fondo rojo
                         row.DefaultCellStyle.ForeColor = Color.White; // Texto blanco
                     }
+                    else if (kantitatea >= kantitateMinimoa && kantitatea <= kantitateMinimoa + 3)
+                    {
+                        row.DefaultCellStyle.BackColor = Color.Orange; // Fondo naranja
+                        row.DefaultCellStyle.ForeColor = Color.Black; // Texto negro
+                    }
+                    else if (kantitatea > kantitateMinimoa + 3 && kantitatea <= kantitateMinimoa + 7)
+                    {
+                        row.DefaultCellStyle.BackColor = Color.Yellow; // Fondo amarillo
+                        row.DefaultCellStyle.ForeColor = Color.Black; // Texto negro
+                    }
                     else
                     {
                         row.DefaultCellStyle.BackColor = Color.Green; // Fondo verde
@@ -94,6 +104,7 @@ namespace AdminApp
                     }
                 }
             }
+
         }
 
         private void button4_Click(object sender, EventArgs e)
