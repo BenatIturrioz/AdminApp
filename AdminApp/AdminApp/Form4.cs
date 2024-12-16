@@ -18,13 +18,15 @@ namespace AdminApp
         private NHibernate.Cfg.Configuration myConfiguration;
         private ISessionFactory mySessionFactory;
         private ISession mySession;
+        private int langileaId;
 
         private List<Produktua> carrito = new List<Produktua>();
 
-        public Form4()
+        public Form4(int LangileaId)
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
+            langileaId = LangileaId;
         }
 
         private void taulaKargatu()
@@ -109,7 +111,7 @@ namespace AdminApp
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            Form2 form2 = new Form2(langileaId);
             form2.Show();
             this.Close();
         }

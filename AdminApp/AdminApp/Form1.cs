@@ -51,13 +51,13 @@ namespace AdminApp
 
                     erregistroakGorde(erabiltzailea.ErabiltzaileIzena, "Onartua");
 
-                    int langileaId = erabiltzailea.LangileaId;
+                    int erabiltzaileaId = erabiltzailea.ErabiltzaileaId;
                     string langileaMota = erabiltzailea.LangileaMota;
 
-                    Console.WriteLine("LangileaId: " + langileaId);
+                    Console.WriteLine("LangileaId: " + erabiltzaileaId);
                     Console.WriteLine("LangileaMota: " + langileaMota);
 
-                    Form2 form2 = new Form2();
+                    Form2 form2 = new Form2(erabiltzaileaId);
                     form2.Show();
                     this.Hide();
                 }
@@ -77,16 +77,13 @@ namespace AdminApp
 
         private void erregistroakGorde(string ErabiltzaileIzena, string mensaje)
         {
-            // Obtener la ruta del archivo de log en la misma carpeta que la app
             string carpeta = "C:/Users/benat/Desktop/AdminApp/AdminApp/Registroak";
 
 
-            // Crear el mensaje con la fecha y el usuario
             string rutaArchivo = Path.Combine(carpeta, "erregistroak.txt");
 
             string logMessage = $"{DateTime.Now:yyyy-MM-dd HH:mm:ss}: {mensaje} - Izena: {ErabiltzaileIzena}";
 
-            // Escribir el mensaje en el archivo (si no existe, lo crea)
             try
             {
                 File.AppendAllText(rutaArchivo, logMessage + Environment.NewLine);

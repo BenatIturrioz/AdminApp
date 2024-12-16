@@ -11,7 +11,7 @@ namespace AdminApp.Dominio
     {
         public string ErabiltzaileIzena { get; set; }
         public string Pasahitza { get; set; }
-        public int LangileaId { get; set; }
+        public int ErabiltzaileaId { get; set; }
         public string LangileaMota { get; set; }
 
         private Connection sqlConnection;
@@ -28,7 +28,7 @@ namespace AdminApp.Dominio
                 using(MySqlConnection connection = sqlConnection.GetConnection())
                 {
                     connection.Open();
-                    string query = "SELECT langilea_id, langilea_mota FROM erronka1.erabiltzailea WHERE erabiltzaileIzena = @erabiltzaile AND pasahitza = @pasahitza";
+                    string query = "SELECT id, langilea_mota FROM erronka1.erabiltzailea WHERE erabiltzaileIzena = @erabiltzaile AND pasahitza = @pasahitza";
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@erabiltzaile", this.ErabiltzaileIzena);
@@ -37,7 +37,7 @@ namespace AdminApp.Dominio
                         {
                             if (reader.Read())
                             {
-                                this.LangileaId = reader.GetInt32("langilea_id");
+                                this.ErabiltzaileaId = reader.GetInt32("id");
                                 this.LangileaMota = reader["langilea_mota"].ToString();
                                 return this.LangileaMota == "3";
                             }

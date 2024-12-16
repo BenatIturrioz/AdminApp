@@ -20,11 +20,13 @@ namespace AdminApp
         private NHibernate.Cfg.Configuration myConfiguration;
         private ISessionFactory mySessionFactory;
         private ISession mySession;
+        private int erabiltzaileaId;
 
-        public Form3()
+        public Form3(int ErabiltzaileaId)
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
+            erabiltzaileaId = ErabiltzaileaId;
         }
 
         private void LoadDataGridView()
@@ -62,6 +64,36 @@ namespace AdminApp
             catch (Exception ex)
             {
                 MessageBox.Show("Error: "+ex.Message);
+            }
+        }
+
+        private void historialaGorde(int produktuaId, string ekintza)
+        {
+            ProduktuHistorikoa historiala = new ProduktuHistorikoa
+            {
+                ProduktuaId = produktuaId,
+                ErabiltzaileaId = erabiltzaileaId,
+                Data = DateTime.Now,
+                Ekintza = ekintza,
+                Galera = 0
+            };
+            using (var session = mySessionFactory.OpenSession())
+            {
+                using (var transaction = session.BeginTransaction()) 
+                {
+                    try
+                    {
+                        session.Save(historiala);
+                        transaction.Commit();
+                    }
+                    catch (Exception ex)
+                    { 
+                        transaction.Rollback();
+                        MessageBox.Show("Arazoa historiala gordetzean:" +  ex.Message);
+                    }
+
+                }
+                
             }
         }
 
@@ -110,6 +142,7 @@ namespace AdminApp
                     mySession.Save(produktua);
                     transaction.Commit();  // Asegúrate de confirmar la transacción
                     MessageBox.Show("Produktua ongi gehituta.");
+                    historialaGorde(produktua.Id, "Produktua gehitu");
                     LoadDataGridView();
                 }
                 catch (Exception ex)
@@ -153,6 +186,7 @@ namespace AdminApp
                             mySession.Delete(produktuaEzabatu);
                             transaction.Commit(); // Confirmar la transacción para aplicar el cambio
                             MessageBox.Show("Produktua ongi ezabatua izan da.");
+                            historialaGorde(id, "Produktua ezabatu");
                             LoadDataGridView();
                         }
                         else
@@ -218,6 +252,7 @@ namespace AdminApp
                             transaction.Commit();  // Confirmar la transacción
 
                             MessageBox.Show("Produktua ondo eguneratu da.");
+                            historialaGorde(id, "Produktua ezabatu");
                             LoadDataGridView();
                         }
                         else
@@ -247,7 +282,7 @@ namespace AdminApp
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            Form2 form2 = new Form2(erabiltzaileaId);
             form2.Show();
             this.Close();
         }
