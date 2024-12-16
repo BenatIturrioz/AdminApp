@@ -541,6 +541,7 @@
             this.textBoxDeskribapenaEzabatu.Location = new System.Drawing.Point(6, 366);
             this.textBoxDeskribapenaEzabatu.Multiline = true;
             this.textBoxDeskribapenaEzabatu.Name = "textBoxDeskribapenaEzabatu";
+            this.textBoxDeskribapenaEzabatu.ReadOnly = true;
             this.textBoxDeskribapenaEzabatu.Size = new System.Drawing.Size(513, 109);
             this.textBoxDeskribapenaEzabatu.TabIndex = 6;
             // 
@@ -548,6 +549,7 @@
             // 
             this.textBoxKantitateMinEzabatu.Location = new System.Drawing.Point(284, 275);
             this.textBoxKantitateMinEzabatu.Name = "textBoxKantitateMinEzabatu";
+            this.textBoxKantitateMinEzabatu.ReadOnly = true;
             this.textBoxKantitateMinEzabatu.Size = new System.Drawing.Size(235, 31);
             this.textBoxKantitateMinEzabatu.TabIndex = 5;
             // 
@@ -555,6 +557,7 @@
             // 
             this.textBoxKantitateaEzabatu.Location = new System.Drawing.Point(6, 275);
             this.textBoxKantitateaEzabatu.Name = "textBoxKantitateaEzabatu";
+            this.textBoxKantitateaEzabatu.ReadOnly = true;
             this.textBoxKantitateaEzabatu.Size = new System.Drawing.Size(235, 31);
             this.textBoxKantitateaEzabatu.TabIndex = 4;
             // 
@@ -562,6 +565,7 @@
             // 
             this.textBoxErosketaPrezioaEzabatu.Location = new System.Drawing.Point(284, 174);
             this.textBoxErosketaPrezioaEzabatu.Name = "textBoxErosketaPrezioaEzabatu";
+            this.textBoxErosketaPrezioaEzabatu.ReadOnly = true;
             this.textBoxErosketaPrezioaEzabatu.Size = new System.Drawing.Size(235, 31);
             this.textBoxErosketaPrezioaEzabatu.TabIndex = 3;
             // 
@@ -569,6 +573,7 @@
             // 
             this.textBoxPrezioaEzabatu.Location = new System.Drawing.Point(6, 174);
             this.textBoxPrezioaEzabatu.Name = "textBoxPrezioaEzabatu";
+            this.textBoxPrezioaEzabatu.ReadOnly = true;
             this.textBoxPrezioaEzabatu.Size = new System.Drawing.Size(234, 31);
             this.textBoxPrezioaEzabatu.TabIndex = 2;
             // 
@@ -576,6 +581,7 @@
             // 
             this.textBoxMotaEzabatu.Location = new System.Drawing.Point(284, 86);
             this.textBoxMotaEzabatu.Name = "textBoxMotaEzabatu";
+            this.textBoxMotaEzabatu.ReadOnly = true;
             this.textBoxMotaEzabatu.Size = new System.Drawing.Size(235, 31);
             this.textBoxMotaEzabatu.TabIndex = 1;
             // 
@@ -583,6 +589,7 @@
             // 
             this.textBoxIzenaEzabatu.Location = new System.Drawing.Point(6, 86);
             this.textBoxIzenaEzabatu.Name = "textBoxIzenaEzabatu";
+            this.textBoxIzenaEzabatu.ReadOnly = true;
             this.textBoxIzenaEzabatu.Size = new System.Drawing.Size(234, 31);
             this.textBoxIzenaEzabatu.TabIndex = 0;
             // 
