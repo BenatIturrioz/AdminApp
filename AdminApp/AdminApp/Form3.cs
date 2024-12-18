@@ -249,6 +249,7 @@ namespace AdminApp
 
                             // Guardar los cambios en la base de datos
                             mySession.Update(produktuaEgunertau);
+                            mySession.Save(produktuaEgunertau);
                             transaction.Commit();  // Confirmar la transacción
 
                             MessageBox.Show("Produktua ondo eguneratu da.");

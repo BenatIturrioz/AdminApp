@@ -77,7 +77,8 @@ namespace AdminApp
 
         private void erregistroakGorde(string ErabiltzaileIzena, string mensaje)
         {
-            string carpeta = "C:/Users/benat/Desktop/AdminApp/AdminApp/Registroak";
+            string carpeta = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Registroak");
+
 
 
             string rutaArchivo = Path.Combine(carpeta, "erregistroak.txt");

@@ -86,22 +86,22 @@ namespace AdminApp
                     // Aplicar el color según las condiciones
                     if (kantitatea < kantitateMinimoa)
                     {
-                        row.DefaultCellStyle.BackColor = Color.Red; // Fondo rojo
+                        row.DefaultCellStyle.BackColor = Color.LightCoral; // Fondo rojo
                         row.DefaultCellStyle.ForeColor = Color.White; // Texto blanco
                     }
                     else if (kantitatea >= kantitateMinimoa && kantitatea <= kantitateMinimoa + 3)
                     {
-                        row.DefaultCellStyle.BackColor = Color.Orange; // Fondo naranja
+                        row.DefaultCellStyle.BackColor = Color.LightSalmon; // Fondo naranja
                         row.DefaultCellStyle.ForeColor = Color.Black; // Texto negro
                     }
                     else if (kantitatea > kantitateMinimoa + 3 && kantitatea <= kantitateMinimoa + 7)
                     {
-                        row.DefaultCellStyle.BackColor = Color.Yellow; // Fondo amarillo
+                        row.DefaultCellStyle.BackColor = Color.LightGoldenrodYellow; // Fondo amarillo
                         row.DefaultCellStyle.ForeColor = Color.Black; // Texto negro
                     }
                     else
                     {
-                        row.DefaultCellStyle.BackColor = Color.Green; // Fondo verde
+                        row.DefaultCellStyle.BackColor = Color.LightGreen; // Fondo verde
                         row.DefaultCellStyle.ForeColor = Color.Black; // Texto negro
                     }
                 }

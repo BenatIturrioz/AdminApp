@@ -15,6 +15,6 @@
 
 		<property name="Ekintza" column="ekintza" type="string"/>
 
-		<property name="Galera" column="galera" type="int"/>
+		<property name="Galera" column="galera" type="byte"/>
 	</class>
 </hibernate-mapping>

@@ -13,6 +13,6 @@ namespace AdminApp.Dominio
         public virtual int ErabiltzaileaId { get; set; }
         public virtual DateTime Data { get; set; }
         public virtual string Ekintza { get; set; }
-        public virtual int Galera { get; set; }
+        public virtual byte? Galera { get; set; }
     }
 }
