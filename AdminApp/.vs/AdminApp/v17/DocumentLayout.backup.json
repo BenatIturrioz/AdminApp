@@ -3,24 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\adminapp\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|solutionrelative:adminapp\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|c:\\users\\benat\\desktop\\adminapp\\adminapp\\adminapp\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|solutionrelative:adminapp\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\adminapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|solutionrelative:adminapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\adminapp\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|solutionrelative:adminapp\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\adminapp\\dominio\\erabiltzailea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|solutionrelative:adminapp\\dominio\\erabiltzailea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\adminapp\\produktua.hbm.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|solutionrelative:adminapp\\produktua.hbm.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\adminapp\\dominio\\produktua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,20 +15,8 @@
       "RelativeMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|solutionrelative:adminapp\\produktuhistorikoa.hbm.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|c:\\users\\benat\\desktop\\adminapp\\adminapp\\adminapp\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|solutionrelative:adminapp\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\adminapp\\dominio\\produktuhistorikoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|solutionrelative:adminapp\\dominio\\produktuhistorikoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\adminapp\\produktua.hbm.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|solutionrelative:adminapp\\produktua.hbm.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\adminapp\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|solutionrelative:adminapp\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\adminapp\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|solutionrelative:adminapp\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\adminapp\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,8 +27,24 @@
       "RelativeMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|solutionrelative:adminapp\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\adminapp\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|solutionrelative:adminapp\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\adminapp\\dominio\\erabiltzailea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|solutionrelative:adminapp\\dominio\\erabiltzailea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\adminapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|solutionrelative:adminapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|c:\\users\\benat\\desktop\\adminapp\\adminapp\\adminapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|solutionrelative:adminapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|c:\\users\\benat\\desktop\\adminapp\\adminapp\\adminapp\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|solutionrelative:adminapp\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\adminapp\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E7108FF-03DB-4094-8597-6937E408732D}|AdminApp\\AdminApp.csproj|solutionrelative:adminapp\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,11 +54,128 @@
       "DocumentGroups": [
         {
           "DockedWidth": 713,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form3.cs",
+              "DocumentMoniker": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Form3.cs",
+              "RelativeDocumentMoniker": "AdminApp\\Form3.cs",
+              "ToolTip": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Form3.cs*",
+              "RelativeToolTip": "AdminApp\\Form3.cs*",
+              "ViewState": "AgIAALgAAAAAAAAAAADwv+gAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T14:32:38.628Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProduktuHistorikoa.hbm.xml",
+              "DocumentMoniker": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\ProduktuHistorikoa.hbm.xml",
+              "RelativeDocumentMoniker": "AdminApp\\ProduktuHistorikoa.hbm.xml",
+              "ToolTip": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\ProduktuHistorikoa.hbm.xml",
+              "RelativeToolTip": "AdminApp\\ProduktuHistorikoa.hbm.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-12-16T15:34:47.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Erabiltzailea.cs",
+              "DocumentMoniker": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Dominio\\Erabiltzailea.cs",
+              "RelativeDocumentMoniker": "AdminApp\\Dominio\\Erabiltzailea.cs",
+              "ToolTip": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Dominio\\Erabiltzailea.cs",
+              "RelativeToolTip": "AdminApp\\Dominio\\Erabiltzailea.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAYwB4AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T15:07:46.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Form4.cs",
+              "DocumentMoniker": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Form4.cs",
+              "RelativeDocumentMoniker": "AdminApp\\Form4.cs",
+              "ToolTip": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Form4.cs",
+              "RelativeToolTip": "AdminApp\\Form4.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAwwFcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T12:47:38.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Form1.cs",
+              "RelativeDocumentMoniker": "AdminApp\\Form1.cs",
+              "ToolTip": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Form1.cs",
+              "RelativeToolTip": "AdminApp\\Form1.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAtwC8AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T15:15:29.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Produktua.hbm.xml",
+              "DocumentMoniker": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Produktua.hbm.xml",
+              "RelativeDocumentMoniker": "AdminApp\\Produktua.hbm.xml",
+              "ToolTip": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Produktua.hbm.xml*",
+              "RelativeToolTip": "AdminApp\\Produktua.hbm.xml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-12-16T15:53:57.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form2.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Form2.cs",
+              "RelativeDocumentMoniker": "AdminApp\\Form2.cs",
+              "ToolTip": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Form2.cs [Dise\u00F1o]",
+              "RelativeToolTip": "AdminApp\\Form2.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T15:19:14.431Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Form2.cs",
+              "RelativeDocumentMoniker": "AdminApp\\Form2.cs",
+              "ToolTip": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Form2.cs",
+              "RelativeToolTip": "AdminApp\\Form2.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAArwBUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T15:27:19.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Produktua.cs",
+              "DocumentMoniker": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Dominio\\Produktua.cs",
+              "RelativeDocumentMoniker": "AdminApp\\Dominio\\Produktua.cs",
+              "ToolTip": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Dominio\\Produktua.cs*",
+              "RelativeToolTip": "AdminApp\\Dominio\\Produktua.cs*",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBMAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T15:53:53.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Connection.cs",
               "DocumentMoniker": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Connection.cs",
               "RelativeDocumentMoniker": "AdminApp\\Connection.cs",
@@ -78,168 +183,18 @@
               "RelativeToolTip": "AdminApp\\Connection.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T13:04:47.292Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Produktua.cs",
-              "DocumentMoniker": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Dominio\\Produktua.cs",
-              "RelativeDocumentMoniker": "AdminApp\\Dominio\\Produktua.cs",
-              "ToolTip": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Dominio\\Produktua.cs",
-              "RelativeToolTip": "AdminApp\\Dominio\\Produktua.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:53:53.578Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ProduktuHistorikoa.hbm.xml",
-              "DocumentMoniker": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\ProduktuHistorikoa.hbm.xml",
-              "RelativeDocumentMoniker": "AdminApp\\ProduktuHistorikoa.hbm.xml",
-              "ToolTip": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\ProduktuHistorikoa.hbm.xml",
-              "RelativeToolTip": "AdminApp\\ProduktuHistorikoa.hbm.xml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2024-12-16T15:34:47.419Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form3.cs",
-              "DocumentMoniker": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Form3.cs",
-              "RelativeDocumentMoniker": "AdminApp\\Form3.cs",
-              "ToolTip": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Form3.cs",
-              "RelativeToolTip": "AdminApp\\Form3.cs",
-              "ViewState": "AgIAAA8BAAAAAAAAAADwv/oAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T14:32:38.628Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Erabiltzailea.cs",
-              "DocumentMoniker": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Dominio\\Erabiltzailea.cs",
-              "RelativeDocumentMoniker": "AdminApp\\Dominio\\Erabiltzailea.cs",
-              "ToolTip": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Dominio\\Erabiltzailea.cs",
-              "RelativeToolTip": "AdminApp\\Dominio\\Erabiltzailea.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAYwB4AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T15:07:46.404Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\App.config",
-              "RelativeDocumentMoniker": "AdminApp\\App.config",
-              "ToolTip": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\App.config",
-              "RelativeToolTip": "AdminApp\\App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-12-05T13:07:05.111Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form4.cs",
-              "DocumentMoniker": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Form4.cs",
-              "RelativeDocumentMoniker": "AdminApp\\Form4.cs",
-              "ToolTip": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Form4.cs*",
-              "RelativeToolTip": "AdminApp\\Form4.cs*",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAuwFgAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T12:47:38.363Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form4.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Form4.cs",
-              "RelativeDocumentMoniker": "AdminApp\\Form4.cs",
-              "ToolTip": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Form4.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "AdminApp\\Form4.cs [Dise\u00F1o]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T15:18:23.481Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-12-18T13:04:47.292Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "ProduktuHistorikoa.cs",
-              "DocumentMoniker": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Dominio\\ProduktuHistorikoa.cs",
-              "RelativeDocumentMoniker": "AdminApp\\Dominio\\ProduktuHistorikoa.cs",
-              "ToolTip": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Dominio\\ProduktuHistorikoa.cs",
-              "RelativeToolTip": "AdminApp\\Dominio\\ProduktuHistorikoa.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T13:31:21.132Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form1.cs",
+              "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Form1.cs",
               "RelativeDocumentMoniker": "AdminApp\\Form1.cs",
-              "ToolTip": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Form1.cs",
-              "RelativeToolTip": "AdminApp\\Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "AdminApp\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T15:15:29.08Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Produktua.hbm.xml",
-              "DocumentMoniker": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Produktua.hbm.xml",
-              "RelativeDocumentMoniker": "AdminApp\\Produktua.hbm.xml",
-              "ToolTip": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Produktua.hbm.xml",
-              "RelativeToolTip": "AdminApp\\Produktua.hbm.xml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2024-12-16T15:53:57.425Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Form2.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Form2.cs",
-              "RelativeDocumentMoniker": "AdminApp\\Form2.cs",
-              "ToolTip": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Form2.cs [Dise\u00F1o]",
-              "RelativeToolTip": "AdminApp\\Form2.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:19:14.431Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Form2.cs",
-              "DocumentMoniker": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Form2.cs",
-              "RelativeDocumentMoniker": "AdminApp\\Form2.cs",
-              "ToolTip": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Form2.cs",
-              "RelativeToolTip": "AdminApp\\Form2.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAcwCMAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T15:27:19.111Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Form3.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Form3.cs",
-              "RelativeDocumentMoniker": "AdminApp\\Form3.cs",
-              "ToolTip": "C:\\Users\\benat\\Desktop\\AdminApp\\AdminApp\\AdminApp\\Form3.cs [Dise\u00F1o]",
-              "RelativeToolTip": "AdminApp\\Form3.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T15:29:05.575Z",
+              "WhenOpened": "2024-12-19T12:48:26.611Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

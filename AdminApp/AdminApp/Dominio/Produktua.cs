@@ -17,6 +17,7 @@ namespace AdminApp.Dominio
         public virtual int KantitateMin { get; set; }
         public virtual int Mota { get; set; }
         public virtual int ErosketaKantitatea { get; set; }
+        public virtual byte Aktibo { get; set; }
 
 
     }

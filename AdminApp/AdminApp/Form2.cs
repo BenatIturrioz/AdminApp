@@ -13,27 +13,27 @@ namespace AdminApp
     public partial class Form2 : Form
     {
 
-        private int langileaId;
+        private int erabiltzaileaId;
         //private string erabiltzaileIzena;
 
-        public Form2(int LangileaId)
+        public Form2(int ErabiltzaileaId)
         {
             InitializeComponent();
-            int langileaId = LangileaId;
+            erabiltzaileaId = ErabiltzaileaId;
         }
 
         
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3(langileaId);
+            Form3 form3 = new Form3(erabiltzaileaId);
             form3.Show();
             this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form4 form4 = new Form4(langileaId);
+            Form4 form4 = new Form4(erabiltzaileaId);
             form4.Show();
             this.Hide();
         }

@@ -69,33 +69,44 @@ namespace AdminApp
 
         private void historialaGorde(int produktuaId, string ekintza)
         {
-            ProduktuHistorikoa historiala = new ProduktuHistorikoa
-            {
-                ProduktuaId = produktuaId,
-                ErabiltzaileaId = erabiltzaileaId,
-                Data = DateTime.Now,
-                Ekintza = ekintza,
-                Galera = 0
-            };
-            using (var session = mySessionFactory.OpenSession())
+            using (var session = mySessionFactory.OpenSession()) 
             {
                 using (var transaction = session.BeginTransaction()) 
                 {
                     try
                     {
+                        
+                        var produktua = session.Get<Produktua>(produktuaId); 
+                        if (produktua == null) 
+                        {
+                            MessageBox.Show($"El producto con ID {produktuaId} no existe. Operación cancelada.");
+                            return;
+                        }
+
+                        ProduktuHistorikoa historiala = new ProduktuHistorikoa
+                        {
+                            ProduktuaId = produktuaId,
+                            ErabiltzaileaId = erabiltzaileaId, 
+                            Data = DateTime.Now,
+                            Ekintza = ekintza,
+                            Galera = 0
+                        };
+
                         session.Save(historiala);
+
                         transaction.Commit();
+
+                        MessageBox.Show("El historial se ha guardado correctamente.");
                     }
                     catch (Exception ex)
-                    { 
+                    {
                         transaction.Rollback();
-                        MessageBox.Show("Arazoa historiala gordetzean:" +  ex.Message);
+                        MessageBox.Show("Error al guardar el historial: " + ex.Message);
                     }
-
                 }
-                
             }
         }
+
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -175,37 +186,51 @@ namespace AdminApp
                     // Verificar la respuesta del usuario
                     if (confirmacion == DialogResult.Yes)
                     {
-                        // Cargar el objeto "Produktua" a eliminar
-                        int id = Convert.ToInt32(textBoxIdEzabatu.Text); // ID de la fruta a buscar
+                        // Cargar el objeto "Produktua" a actualizar
+                        int id = Convert.ToInt32(textBoxIdEzabatu.Text); // ID del producto a buscar
                         var produktuaEzabatu = mySession.Query<Produktua>()
                                                         .FirstOrDefault(f => f.Id == id);
 
                         if (produktuaEzabatu != null)
                         {
-                            // Si existe, eliminarlo de la base de datos
-                            mySession.Delete(produktuaEzabatu);
+                            // Cambiar el valor de la columna "aktibo" a 0
+                            produktuaEzabatu.Aktibo = 0;
+
+                            // Guardar el cambio en la base de datos
+                            mySession.Update(produktuaEzabatu);
+
                             transaction.Commit(); // Confirmar la transacción para aplicar el cambio
-                            MessageBox.Show("Produktua ongi ezabatua izan da.");
-                            historialaGorde(id, "Produktua ezabatu");
+
+                            // Registrar el cambio en el historial
+                            historialaGorde(id, "Produktua desaktibatu");
+
+                            // Mostrar mensaje de éxito
+                            MessageBox.Show("Produktua ongi desaktibatua izan da.");
+
+                            // Recargar el DataGridView
                             LoadDataGridView();
                         }
                         else
                         {
+                            // Mostrar mensaje si el producto no existe
                             MessageBox.Show("Produktuaren id-a ezin izan da bilatu.");
                         }
                     }
                     else
                     {
+                        // Operación cancelada por el usuario
                         MessageBox.Show("Ezabatzeko operazioa bertan behera utzi da.");
                     }
                 }
                 catch (Exception ex)
                 {
-                    transaction.Rollback(); // Revertir la transacción en caso de error
+                    // Revertir la transacción en caso de error
+                    transaction.Rollback();
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
         }
+
 
 
         private void button2_Click(object sender, EventArgs e)

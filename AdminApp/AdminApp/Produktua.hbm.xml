@@ -14,5 +14,6 @@
 		<property name="Kantitatea" column="kantitatea" type="int"/>
 		<property name="KantitateMin" column="kantitateMinimoa" type="int"/>
 		<property name="Mota" column="mota" type="int"/>
+		<property name="Aktibo" column="aktibo" type="byte"/>
 	</class>
 </hibernate-mapping>

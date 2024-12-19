@@ -54,7 +54,7 @@ namespace AdminApp
                     int erabiltzaileaId = erabiltzailea.ErabiltzaileaId;
                     string langileaMota = erabiltzailea.LangileaMota;
 
-                    Console.WriteLine("LangileaId: " + erabiltzaileaId);
+                    Console.WriteLine("ErabiltzaileaId: " + erabiltzaileaId);
                     Console.WriteLine("LangileaMota: " + langileaMota);
 
                     Form2 form2 = new Form2(erabiltzaileaId);
