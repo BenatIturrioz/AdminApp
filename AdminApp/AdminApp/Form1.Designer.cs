@@ -37,24 +37,28 @@
             // 
             // erabiltzaileaTextbox
             // 
-            this.erabiltzaileaTextbox.Location = new System.Drawing.Point(328, 297);
+            this.erabiltzaileaTextbox.Location = new System.Drawing.Point(219, 190);
+            this.erabiltzaileaTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.erabiltzaileaTextbox.Name = "erabiltzaileaTextbox";
-            this.erabiltzaileaTextbox.Size = new System.Drawing.Size(510, 31);
+            this.erabiltzaileaTextbox.Size = new System.Drawing.Size(341, 22);
             this.erabiltzaileaTextbox.TabIndex = 0;
             // 
             // pasahitzaTextbox
             // 
-            this.pasahitzaTextbox.Location = new System.Drawing.Point(328, 383);
+            this.pasahitzaTextbox.Location = new System.Drawing.Point(219, 245);
+            this.pasahitzaTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pasahitzaTextbox.Name = "pasahitzaTextbox";
-            this.pasahitzaTextbox.Size = new System.Drawing.Size(510, 31);
+            this.pasahitzaTextbox.Size = new System.Drawing.Size(341, 22);
             this.pasahitzaTextbox.TabIndex = 1;
             // 
             // saioaHasiButton
             // 
-            this.saioaHasiButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.saioaHasiButton.Location = new System.Drawing.Point(418, 464);
+            this.saioaHasiButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
+            this.saioaHasiButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.saioaHasiButton.Location = new System.Drawing.Point(279, 297);
+            this.saioaHasiButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.saioaHasiButton.Name = "saioaHasiButton";
-            this.saioaHasiButton.Size = new System.Drawing.Size(346, 71);
+            this.saioaHasiButton.Size = new System.Drawing.Size(231, 45);
             this.saioaHasiButton.TabIndex = 2;
             this.saioaHasiButton.Text = "SAIOA HASI";
             this.saioaHasiButton.UseVisualStyleBackColor = false;
@@ -63,35 +67,40 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(323, 269);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.label1.Location = new System.Drawing.Point(215, 172);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 25);
+            this.label1.Size = new System.Drawing.Size(111, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "ERABILTZAILEA:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(323, 355);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.label2.Location = new System.Drawing.Point(215, 227);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 25);
+            this.label2.Size = new System.Drawing.Size(85, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = "PASAHITZA:";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1196, 595);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(214)))), ((int)(((byte)(203)))));
+            this.ClientSize = new System.Drawing.Size(797, 381);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.saioaHasiButton);
             this.Controls.Add(this.pasahitzaTextbox);
             this.Controls.Add(this.erabiltzaileaTextbox);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

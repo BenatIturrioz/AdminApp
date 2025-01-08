@@ -94,5 +94,10 @@ namespace AdminApp
                 MessageBox.Show("No se pudo guardar el registro: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
