@@ -1,12 +1,12 @@
 # Visual Studio
-.vs/
-*.user
-*.suo
-*.userosscache
-*.sln.docstates
+AdminApp/.vs/
+AdminApp/*.user
+AdminApp/*.suo
+AdminApp/*.userosscache
+AdminApp/*.sln.docstates
 
 # Build results
-bin/
-obj/
-[Bb]uild/
-[Ll]og/
+AdminApp/bin/
+AdminApp/obj/
+AdminApp/[Bb]uild/
+AdminApp/[Ll]og/
