@@ -44,21 +44,15 @@ namespace AdminApp
                     {
                         try
                         {
-                            // Consulta HQL que obtiene todos los registros de la tabla "produktua"
                             string hql = "FROM Produktua";
                             var query = mySession.CreateQuery(hql);
 
-                            // Ejecuta la consulta y convierte los resultados a una lista de objetos
                             var produktuak = query.List<Produktua>();
 
-                            // Asigna la lista al DataGridView
                             dataGridView1.DataSource = produktuak;
 
-                            // Configura las propiedades de auto-ajuste del DataGridView
                             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-
-                            // Opcional: manejo de formateo de celdas
                             dataGridView1.CellFormatting += dataGridView1_CellFormatting;
 
                             transaction.Commit(); // Confirma la transacción
@@ -178,39 +172,62 @@ namespace AdminApp
         {
             try
             {
-                Connection connection = new Connection();
+                // Configuración de NHibernate
+                var myConfiguration = new NHibernate.Cfg.Configuration();
+                myConfiguration.Configure(); // Lee la configuración desde app.config o hibernate.cfg.xml
+                var mySessionFactory = myConfiguration.BuildSessionFactory();
 
-                using (MySqlConnection konexioa = connection.GetConnection())
+                using (var mySession = mySessionFactory.OpenSession())
                 {
-                    konexioa.Open();
-                    foreach (var producto in carrito)
+                    using (var transaction = mySession.BeginTransaction())
                     {
-                        string query = "UPDATE produktua SET kantitatea = kantitatea + @erosketaKantitatea WHERE izena = @izena";
-                        using (MySqlCommand cmd = new MySqlCommand(query, konexioa))
+                        try
                         {
-                            cmd.Parameters.AddWithValue("@erosketaKantitatea", producto.ErosketaKantitatea);
-                            cmd.Parameters.AddWithValue("@izena", producto.Izena);
+                            // Actualizar los productos en el carrito
+                            foreach (var producto in carrito)
+                            {
+                                // Buscar el producto en la base de datos por su nombre
+                                var productoExistente = mySession.QueryOver<Produktua>()
+                                    .Where(p => p.Izena == producto.Izena)
+                                    .SingleOrDefault();
 
-                            cmd.ExecuteNonQuery();
+                                if (productoExistente != null)
+                                {
+                                    // Actualizamos la cantidad del producto
+                                    productoExistente.Kantitatea += producto.ErosketaKantitatea;
+
+                                    // Guardamos los cambios en la base de datos
+                                    mySession.SaveOrUpdate(productoExistente);
+                                }
+                            }
+
+                            // Confirmar la transacción
+                            transaction.Commit();
+
+                            MessageBox.Show("Compra realizada con éxito. Las cantidades han sido actualizadas.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            // Limpiar el carrito y la lista visual
+                            carrito.Clear();
+                            listBoxCarrito.Items.Clear();
+
+                            taulaKargatu(); // Recargar la tabla
+                        }
+                        catch (Exception ex)
+                        {
+                            transaction.Rollback(); // Revierte la transacción en caso de error
+                            MessageBox.Show("Error al realizar la compra: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
-
-                    MessageBox.Show("Compra realizada con éxito. Las cantidades han sido actualizadas.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    // Limpiar el carrito y la lista visual
-                    carrito.Clear();
-                    listBoxCarrito.Items.Clear();
-
-                    taulaKargatu();
-
-
-
-                } 
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al realizar la compra: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al inicializar NHibernate: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
     }
+
 }
+
