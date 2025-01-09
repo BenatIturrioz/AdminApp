@@ -1,12 +1,3 @@
-# Visual Studio
 AdminApp/.vs/
-AdminApp/*.user
-AdminApp/*.suo
-AdminApp/*.userosscache
-AdminApp/*.sln.docstates
-
-# Build results
-AdminApp/bin/
-AdminApp/obj/
-AdminApp/[Bb]uild/
-AdminApp/[Ll]og/
+AdminApp/AdminApp/obj/
+AdminApp/AdminApp/bin/
