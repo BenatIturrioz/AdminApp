@@ -19,6 +19,7 @@ namespace AdminApp
         public Form2(int ErabiltzaileaId)
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
             erabiltzaileaId = ErabiltzaileaId;
         }
 
