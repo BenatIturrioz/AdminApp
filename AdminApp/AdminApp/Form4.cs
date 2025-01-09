@@ -33,25 +33,42 @@ namespace AdminApp
         {
             try
             {
-                Connection connection = new Connection();
-                string query = "SELECT * FROM produktua";
+                // Configuración de NHibernate
+                var myConfiguration = new NHibernate.Cfg.Configuration();
+                myConfiguration.Configure(); // Esto lee el archivo de configuración app.config o hibernate.cfg.xml
+                var mySessionFactory = myConfiguration.BuildSessionFactory();
 
-                using (MySqlConnection konexioa = connection.GetConnection())
+                using (var mySession = mySessionFactory.OpenSession())
                 {
-                    konexioa.Open();
-                    using (MySqlCommand cmd = new MySqlCommand(query, konexioa))
+                    using (var transaction = mySession.BeginTransaction())
                     {
-                        MySqlDataAdapter dataAdapter = new MySqlDataAdapter(cmd);
-                        DataTable tabla1 = new DataTable();
-                        dataAdapter.Fill(tabla1);
-                        dataGridView1.DataSource = tabla1;
+                        try
+                        {
+                            // Consulta HQL que obtiene todos los registros de la tabla "produktua"
+                            string hql = "FROM Produktua";
+                            var query = mySession.CreateQuery(hql);
+
+                            // Ejecuta la consulta y convierte los resultados a una lista de objetos
+                            var produktuak = query.List<Produktua>();
+
+                            // Asigna la lista al DataGridView
+                            dataGridView1.DataSource = produktuak;
+
+                            // Configura las propiedades de auto-ajuste del DataGridView
+                            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
+                            // Opcional: manejo de formateo de celdas
+                            dataGridView1.CellFormatting += dataGridView1_CellFormatting;
+
+                            transaction.Commit(); // Confirma la transacción
+                        }
+                        catch (Exception ex)
+                        {
+                            transaction.Rollback(); // Revierte la transacción en caso de error
+                            MessageBox.Show("Error: " + ex.Message);
+                        }
                     }
-
-                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                    dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-
-                    dataGridView1.CellFormatting += dataGridView1_CellFormatting;
-
                 }
             }
             catch (Exception ex)
@@ -59,6 +76,7 @@ namespace AdminApp
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
 
         private void Form4_Load(object sender, EventArgs e)
         {
