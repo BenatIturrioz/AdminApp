@@ -91,11 +91,12 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(385, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(257, 8);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1711, 770);
+            this.dataGridView1.Size = new System.Drawing.Size(1141, 493);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -117,9 +118,11 @@
             this.groupBox1.Controls.Add(this.textBoxPrezioaGehitu);
             this.groupBox1.Controls.Add(this.textBoxMotaGehitu);
             this.groupBox1.Controls.Add(this.textBoxIzenaGehitu);
-            this.groupBox1.Location = new System.Drawing.Point(385, 799);
+            this.groupBox1.Location = new System.Drawing.Point(257, 511);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(524, 559);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(349, 358);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Produktua gehitu";
@@ -127,72 +130,80 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(6, 338);
+            this.label19.Location = new System.Drawing.Point(4, 216);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(151, 25);
+            this.label19.Size = new System.Drawing.Size(96, 16);
             this.label19.TabIndex = 18;
             this.label19.Text = "Deskribapena:";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(279, 247);
+            this.label17.Location = new System.Drawing.Point(186, 158);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(189, 25);
+            this.label17.Size = new System.Drawing.Size(115, 16);
             this.label17.TabIndex = 17;
             this.label17.Text = "Kantitate minimoa:";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 247);
+            this.label13.Location = new System.Drawing.Point(4, 158);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(115, 25);
+            this.label13.Size = new System.Drawing.Size(69, 16);
             this.label13.TabIndex = 13;
             this.label13.Text = "Kantitatea:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(279, 146);
+            this.label10.Location = new System.Drawing.Point(186, 93);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(180, 25);
+            this.label10.Size = new System.Drawing.Size(112, 16);
             this.label10.TabIndex = 12;
             this.label10.Text = "Erosketa prezioa:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 146);
+            this.label7.Location = new System.Drawing.Point(4, 93);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 25);
+            this.label7.Size = new System.Drawing.Size(56, 16);
             this.label7.TabIndex = 10;
             this.label7.Text = "Prezioa:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(279, 58);
+            this.label2.Location = new System.Drawing.Point(186, 37);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 25);
+            this.label2.Size = new System.Drawing.Size(40, 16);
             this.label2.TabIndex = 9;
             this.label2.Text = "Mota:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 58);
+            this.label1.Location = new System.Drawing.Point(4, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 25);
+            this.label1.Size = new System.Drawing.Size(42, 16);
             this.label1.TabIndex = 8;
             this.label1.Text = "Izena:";
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Lime;
-            this.button1.Location = new System.Drawing.Point(6, 483);
+            this.button1.Location = new System.Drawing.Point(4, 309);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(514, 70);
+            this.button1.Size = new System.Drawing.Size(343, 45);
             this.button1.TabIndex = 7;
             this.button1.Text = "PRODUKTUA GEHITU";
             this.button1.UseVisualStyleBackColor = false;
@@ -200,52 +211,59 @@
             // 
             // textBoxDeskribapenaGehitu
             // 
-            this.textBoxDeskribapenaGehitu.Location = new System.Drawing.Point(6, 366);
+            this.textBoxDeskribapenaGehitu.Location = new System.Drawing.Point(4, 234);
+            this.textBoxDeskribapenaGehitu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDeskribapenaGehitu.Multiline = true;
             this.textBoxDeskribapenaGehitu.Name = "textBoxDeskribapenaGehitu";
-            this.textBoxDeskribapenaGehitu.Size = new System.Drawing.Size(513, 109);
+            this.textBoxDeskribapenaGehitu.Size = new System.Drawing.Size(343, 71);
             this.textBoxDeskribapenaGehitu.TabIndex = 6;
             // 
             // textBoxKantitateMinGehitu
             // 
-            this.textBoxKantitateMinGehitu.Location = new System.Drawing.Point(284, 275);
+            this.textBoxKantitateMinGehitu.Location = new System.Drawing.Point(189, 176);
+            this.textBoxKantitateMinGehitu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxKantitateMinGehitu.Name = "textBoxKantitateMinGehitu";
-            this.textBoxKantitateMinGehitu.Size = new System.Drawing.Size(235, 31);
+            this.textBoxKantitateMinGehitu.Size = new System.Drawing.Size(158, 22);
             this.textBoxKantitateMinGehitu.TabIndex = 5;
             // 
             // textBoxKantitateaGehitu
             // 
-            this.textBoxKantitateaGehitu.Location = new System.Drawing.Point(6, 275);
+            this.textBoxKantitateaGehitu.Location = new System.Drawing.Point(4, 176);
+            this.textBoxKantitateaGehitu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxKantitateaGehitu.Name = "textBoxKantitateaGehitu";
-            this.textBoxKantitateaGehitu.Size = new System.Drawing.Size(235, 31);
+            this.textBoxKantitateaGehitu.Size = new System.Drawing.Size(158, 22);
             this.textBoxKantitateaGehitu.TabIndex = 4;
             // 
             // textBoxErosketaPrezioaGehitu
             // 
-            this.textBoxErosketaPrezioaGehitu.Location = new System.Drawing.Point(284, 174);
+            this.textBoxErosketaPrezioaGehitu.Location = new System.Drawing.Point(189, 111);
+            this.textBoxErosketaPrezioaGehitu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxErosketaPrezioaGehitu.Name = "textBoxErosketaPrezioaGehitu";
-            this.textBoxErosketaPrezioaGehitu.Size = new System.Drawing.Size(235, 31);
+            this.textBoxErosketaPrezioaGehitu.Size = new System.Drawing.Size(158, 22);
             this.textBoxErosketaPrezioaGehitu.TabIndex = 3;
             // 
             // textBoxPrezioaGehitu
             // 
-            this.textBoxPrezioaGehitu.Location = new System.Drawing.Point(6, 174);
+            this.textBoxPrezioaGehitu.Location = new System.Drawing.Point(4, 111);
+            this.textBoxPrezioaGehitu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxPrezioaGehitu.Name = "textBoxPrezioaGehitu";
-            this.textBoxPrezioaGehitu.Size = new System.Drawing.Size(234, 31);
+            this.textBoxPrezioaGehitu.Size = new System.Drawing.Size(157, 22);
             this.textBoxPrezioaGehitu.TabIndex = 2;
             // 
             // textBoxMotaGehitu
             // 
-            this.textBoxMotaGehitu.Location = new System.Drawing.Point(284, 86);
+            this.textBoxMotaGehitu.Location = new System.Drawing.Point(189, 55);
+            this.textBoxMotaGehitu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxMotaGehitu.Name = "textBoxMotaGehitu";
-            this.textBoxMotaGehitu.Size = new System.Drawing.Size(235, 31);
+            this.textBoxMotaGehitu.Size = new System.Drawing.Size(158, 22);
             this.textBoxMotaGehitu.TabIndex = 1;
             // 
             // textBoxIzenaGehitu
             // 
-            this.textBoxIzenaGehitu.Location = new System.Drawing.Point(6, 86);
+            this.textBoxIzenaGehitu.Location = new System.Drawing.Point(4, 55);
+            this.textBoxIzenaGehitu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxIzenaGehitu.Name = "textBoxIzenaGehitu";
-            this.textBoxIzenaGehitu.Size = new System.Drawing.Size(234, 31);
+            this.textBoxIzenaGehitu.Size = new System.Drawing.Size(157, 22);
             this.textBoxIzenaGehitu.TabIndex = 0;
             // 
             // groupBox2
@@ -268,9 +286,11 @@
             this.groupBox2.Controls.Add(this.textBoxPrezioaEguneratu);
             this.groupBox2.Controls.Add(this.textBoxMotaEguneratu);
             this.groupBox2.Controls.Add(this.textBoxIzenaEguneratu);
-            this.groupBox2.Location = new System.Drawing.Point(979, 799);
+            this.groupBox2.Location = new System.Drawing.Point(653, 511);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(524, 559);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(349, 358);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Produktua eguneratu";
@@ -278,9 +298,10 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(430, 33);
+            this.label22.Location = new System.Drawing.Point(287, 21);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(35, 25);
+            this.label22.Size = new System.Drawing.Size(21, 16);
             this.label22.TabIndex = 21;
             this.label22.Text = "Id:";
             this.label22.Click += new System.EventHandler(this.label22_Click);
@@ -288,80 +309,89 @@
             // textBoxIdEguneratu
             // 
             this.textBoxIdEguneratu.Enabled = false;
-            this.textBoxIdEguneratu.Location = new System.Drawing.Point(471, 30);
+            this.textBoxIdEguneratu.Location = new System.Drawing.Point(314, 19);
+            this.textBoxIdEguneratu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxIdEguneratu.Name = "textBoxIdEguneratu";
-            this.textBoxIdEguneratu.Size = new System.Drawing.Size(47, 31);
+            this.textBoxIdEguneratu.Size = new System.Drawing.Size(33, 22);
             this.textBoxIdEguneratu.TabIndex = 20;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(6, 338);
+            this.label20.Location = new System.Drawing.Point(4, 216);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(151, 25);
+            this.label20.Size = new System.Drawing.Size(96, 16);
             this.label20.TabIndex = 19;
             this.label20.Text = "Deskribapena:";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(279, 247);
+            this.label16.Location = new System.Drawing.Point(186, 158);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(189, 25);
+            this.label16.Size = new System.Drawing.Size(115, 16);
             this.label16.TabIndex = 18;
             this.label16.Text = "Kantitate minimoa:";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 247);
+            this.label15.Location = new System.Drawing.Point(4, 158);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(115, 25);
+            this.label15.Size = new System.Drawing.Size(69, 16);
             this.label15.TabIndex = 15;
             this.label15.Text = "Kantitatea:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(279, 146);
+            this.label11.Location = new System.Drawing.Point(186, 93);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(180, 25);
+            this.label11.Size = new System.Drawing.Size(112, 16);
             this.label11.TabIndex = 13;
             this.label11.Text = "Erosketa prezioa:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 146);
+            this.label8.Location = new System.Drawing.Point(4, 93);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(91, 25);
+            this.label8.Size = new System.Drawing.Size(56, 16);
             this.label8.TabIndex = 11;
             this.label8.Text = "Prezioa:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(279, 58);
+            this.label5.Location = new System.Drawing.Point(186, 37);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 25);
+            this.label5.Size = new System.Drawing.Size(40, 16);
             this.label5.TabIndex = 10;
             this.label5.Text = "Mota:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 58);
+            this.label4.Location = new System.Drawing.Point(4, 37);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 25);
+            this.label4.Size = new System.Drawing.Size(42, 16);
             this.label4.TabIndex = 11;
             this.label4.Text = "Izena:";
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Gold;
-            this.button2.Location = new System.Drawing.Point(6, 483);
+            this.button2.Location = new System.Drawing.Point(4, 309);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(514, 70);
+            this.button2.Size = new System.Drawing.Size(343, 45);
             this.button2.TabIndex = 7;
             this.button2.Text = "PRODUKTUA EGUNERATU";
             this.button2.UseVisualStyleBackColor = false;
@@ -369,52 +399,59 @@
             // 
             // textBoxDeskribapenaEguneratu
             // 
-            this.textBoxDeskribapenaEguneratu.Location = new System.Drawing.Point(6, 366);
+            this.textBoxDeskribapenaEguneratu.Location = new System.Drawing.Point(4, 234);
+            this.textBoxDeskribapenaEguneratu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDeskribapenaEguneratu.Multiline = true;
             this.textBoxDeskribapenaEguneratu.Name = "textBoxDeskribapenaEguneratu";
-            this.textBoxDeskribapenaEguneratu.Size = new System.Drawing.Size(513, 109);
+            this.textBoxDeskribapenaEguneratu.Size = new System.Drawing.Size(343, 71);
             this.textBoxDeskribapenaEguneratu.TabIndex = 6;
             // 
             // textBoxKantitateMinEguneratu
             // 
-            this.textBoxKantitateMinEguneratu.Location = new System.Drawing.Point(284, 275);
+            this.textBoxKantitateMinEguneratu.Location = new System.Drawing.Point(189, 176);
+            this.textBoxKantitateMinEguneratu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxKantitateMinEguneratu.Name = "textBoxKantitateMinEguneratu";
-            this.textBoxKantitateMinEguneratu.Size = new System.Drawing.Size(235, 31);
+            this.textBoxKantitateMinEguneratu.Size = new System.Drawing.Size(158, 22);
             this.textBoxKantitateMinEguneratu.TabIndex = 5;
             // 
             // textBoxKantitateaEguneratu
             // 
-            this.textBoxKantitateaEguneratu.Location = new System.Drawing.Point(6, 275);
+            this.textBoxKantitateaEguneratu.Location = new System.Drawing.Point(4, 176);
+            this.textBoxKantitateaEguneratu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxKantitateaEguneratu.Name = "textBoxKantitateaEguneratu";
-            this.textBoxKantitateaEguneratu.Size = new System.Drawing.Size(235, 31);
+            this.textBoxKantitateaEguneratu.Size = new System.Drawing.Size(158, 22);
             this.textBoxKantitateaEguneratu.TabIndex = 4;
             // 
             // textBoxErosketaPrezioaEguneratu
             // 
-            this.textBoxErosketaPrezioaEguneratu.Location = new System.Drawing.Point(284, 174);
+            this.textBoxErosketaPrezioaEguneratu.Location = new System.Drawing.Point(189, 111);
+            this.textBoxErosketaPrezioaEguneratu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxErosketaPrezioaEguneratu.Name = "textBoxErosketaPrezioaEguneratu";
-            this.textBoxErosketaPrezioaEguneratu.Size = new System.Drawing.Size(235, 31);
+            this.textBoxErosketaPrezioaEguneratu.Size = new System.Drawing.Size(158, 22);
             this.textBoxErosketaPrezioaEguneratu.TabIndex = 3;
             // 
             // textBoxPrezioaEguneratu
             // 
-            this.textBoxPrezioaEguneratu.Location = new System.Drawing.Point(6, 174);
+            this.textBoxPrezioaEguneratu.Location = new System.Drawing.Point(4, 111);
+            this.textBoxPrezioaEguneratu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxPrezioaEguneratu.Name = "textBoxPrezioaEguneratu";
-            this.textBoxPrezioaEguneratu.Size = new System.Drawing.Size(234, 31);
+            this.textBoxPrezioaEguneratu.Size = new System.Drawing.Size(157, 22);
             this.textBoxPrezioaEguneratu.TabIndex = 2;
             // 
             // textBoxMotaEguneratu
             // 
-            this.textBoxMotaEguneratu.Location = new System.Drawing.Point(284, 86);
+            this.textBoxMotaEguneratu.Location = new System.Drawing.Point(189, 55);
+            this.textBoxMotaEguneratu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxMotaEguneratu.Name = "textBoxMotaEguneratu";
-            this.textBoxMotaEguneratu.Size = new System.Drawing.Size(235, 31);
+            this.textBoxMotaEguneratu.Size = new System.Drawing.Size(158, 22);
             this.textBoxMotaEguneratu.TabIndex = 1;
             // 
             // textBoxIzenaEguneratu
             // 
-            this.textBoxIzenaEguneratu.Location = new System.Drawing.Point(6, 86);
+            this.textBoxIzenaEguneratu.Location = new System.Drawing.Point(4, 55);
+            this.textBoxIzenaEguneratu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxIzenaEguneratu.Name = "textBoxIzenaEguneratu";
-            this.textBoxIzenaEguneratu.Size = new System.Drawing.Size(234, 31);
+            this.textBoxIzenaEguneratu.Size = new System.Drawing.Size(157, 22);
             this.textBoxIzenaEguneratu.TabIndex = 0;
             // 
             // groupBox3
@@ -437,9 +474,11 @@
             this.groupBox3.Controls.Add(this.textBoxPrezioaEzabatu);
             this.groupBox3.Controls.Add(this.textBoxMotaEzabatu);
             this.groupBox3.Controls.Add(this.textBoxIzenaEzabatu);
-            this.groupBox3.Location = new System.Drawing.Point(1572, 799);
+            this.groupBox3.Location = new System.Drawing.Point(1048, 511);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(524, 559);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Size = new System.Drawing.Size(349, 358);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Produktua ezabatu";
@@ -448,89 +487,99 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Enabled = false;
-            this.label23.Location = new System.Drawing.Point(432, 33);
+            this.label23.Location = new System.Drawing.Point(288, 21);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(35, 25);
+            this.label23.Size = new System.Drawing.Size(21, 16);
             this.label23.TabIndex = 23;
             this.label23.Text = "Id:";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 338);
+            this.label21.Location = new System.Drawing.Point(4, 216);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(151, 25);
+            this.label21.Size = new System.Drawing.Size(96, 16);
             this.label21.TabIndex = 20;
             this.label21.Text = "Deskribapena:";
             // 
             // textBoxIdEzabatu
             // 
             this.textBoxIdEzabatu.Enabled = false;
-            this.textBoxIdEzabatu.Location = new System.Drawing.Point(473, 30);
+            this.textBoxIdEzabatu.Location = new System.Drawing.Point(315, 19);
+            this.textBoxIdEzabatu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxIdEzabatu.Name = "textBoxIdEzabatu";
-            this.textBoxIdEzabatu.Size = new System.Drawing.Size(47, 31);
+            this.textBoxIdEzabatu.Size = new System.Drawing.Size(33, 22);
             this.textBoxIdEzabatu.TabIndex = 22;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(279, 247);
+            this.label18.Location = new System.Drawing.Point(186, 158);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(189, 25);
+            this.label18.Size = new System.Drawing.Size(115, 16);
             this.label18.TabIndex = 19;
             this.label18.Text = "Kantitate minimoa:";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 247);
+            this.label14.Location = new System.Drawing.Point(4, 158);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(115, 25);
+            this.label14.Size = new System.Drawing.Size(69, 16);
             this.label14.TabIndex = 14;
             this.label14.Text = "Kantitatea:";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(279, 146);
+            this.label12.Location = new System.Drawing.Point(186, 93);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(180, 25);
+            this.label12.Size = new System.Drawing.Size(112, 16);
             this.label12.TabIndex = 14;
             this.label12.Text = "Erosketa prezioa:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 146);
+            this.label9.Location = new System.Drawing.Point(4, 93);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(91, 25);
+            this.label9.Size = new System.Drawing.Size(56, 16);
             this.label9.TabIndex = 12;
             this.label9.Text = "Prezioa:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(279, 58);
+            this.label6.Location = new System.Drawing.Point(186, 37);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 25);
+            this.label6.Size = new System.Drawing.Size(40, 16);
             this.label6.TabIndex = 11;
             this.label6.Text = "Mota:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 58);
+            this.label3.Location = new System.Drawing.Point(4, 37);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 25);
+            this.label3.Size = new System.Drawing.Size(42, 16);
             this.label3.TabIndex = 10;
             this.label3.Text = "Izena:";
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button3.Location = new System.Drawing.Point(6, 483);
+            this.button3.Location = new System.Drawing.Point(4, 309);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(514, 70);
+            this.button3.Size = new System.Drawing.Size(343, 45);
             this.button3.TabIndex = 7;
             this.button3.Text = "PRODUKTUA EZABATU";
             this.button3.UseVisualStyleBackColor = false;
@@ -538,67 +587,76 @@
             // 
             // textBoxDeskribapenaEzabatu
             // 
-            this.textBoxDeskribapenaEzabatu.Location = new System.Drawing.Point(6, 366);
+            this.textBoxDeskribapenaEzabatu.Location = new System.Drawing.Point(4, 234);
+            this.textBoxDeskribapenaEzabatu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDeskribapenaEzabatu.Multiline = true;
             this.textBoxDeskribapenaEzabatu.Name = "textBoxDeskribapenaEzabatu";
             this.textBoxDeskribapenaEzabatu.ReadOnly = true;
-            this.textBoxDeskribapenaEzabatu.Size = new System.Drawing.Size(513, 109);
+            this.textBoxDeskribapenaEzabatu.Size = new System.Drawing.Size(343, 71);
             this.textBoxDeskribapenaEzabatu.TabIndex = 6;
             // 
             // textBoxKantitateMinEzabatu
             // 
-            this.textBoxKantitateMinEzabatu.Location = new System.Drawing.Point(284, 275);
+            this.textBoxKantitateMinEzabatu.Location = new System.Drawing.Point(189, 176);
+            this.textBoxKantitateMinEzabatu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxKantitateMinEzabatu.Name = "textBoxKantitateMinEzabatu";
             this.textBoxKantitateMinEzabatu.ReadOnly = true;
-            this.textBoxKantitateMinEzabatu.Size = new System.Drawing.Size(235, 31);
+            this.textBoxKantitateMinEzabatu.Size = new System.Drawing.Size(158, 22);
             this.textBoxKantitateMinEzabatu.TabIndex = 5;
             // 
             // textBoxKantitateaEzabatu
             // 
-            this.textBoxKantitateaEzabatu.Location = new System.Drawing.Point(6, 275);
+            this.textBoxKantitateaEzabatu.Location = new System.Drawing.Point(4, 176);
+            this.textBoxKantitateaEzabatu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxKantitateaEzabatu.Name = "textBoxKantitateaEzabatu";
             this.textBoxKantitateaEzabatu.ReadOnly = true;
-            this.textBoxKantitateaEzabatu.Size = new System.Drawing.Size(235, 31);
+            this.textBoxKantitateaEzabatu.Size = new System.Drawing.Size(158, 22);
             this.textBoxKantitateaEzabatu.TabIndex = 4;
             // 
             // textBoxErosketaPrezioaEzabatu
             // 
-            this.textBoxErosketaPrezioaEzabatu.Location = new System.Drawing.Point(284, 174);
+            this.textBoxErosketaPrezioaEzabatu.Location = new System.Drawing.Point(189, 111);
+            this.textBoxErosketaPrezioaEzabatu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxErosketaPrezioaEzabatu.Name = "textBoxErosketaPrezioaEzabatu";
             this.textBoxErosketaPrezioaEzabatu.ReadOnly = true;
-            this.textBoxErosketaPrezioaEzabatu.Size = new System.Drawing.Size(235, 31);
+            this.textBoxErosketaPrezioaEzabatu.Size = new System.Drawing.Size(158, 22);
             this.textBoxErosketaPrezioaEzabatu.TabIndex = 3;
             // 
             // textBoxPrezioaEzabatu
             // 
-            this.textBoxPrezioaEzabatu.Location = new System.Drawing.Point(6, 174);
+            this.textBoxPrezioaEzabatu.Location = new System.Drawing.Point(4, 111);
+            this.textBoxPrezioaEzabatu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxPrezioaEzabatu.Name = "textBoxPrezioaEzabatu";
             this.textBoxPrezioaEzabatu.ReadOnly = true;
-            this.textBoxPrezioaEzabatu.Size = new System.Drawing.Size(234, 31);
+            this.textBoxPrezioaEzabatu.Size = new System.Drawing.Size(157, 22);
             this.textBoxPrezioaEzabatu.TabIndex = 2;
             // 
             // textBoxMotaEzabatu
             // 
-            this.textBoxMotaEzabatu.Location = new System.Drawing.Point(284, 86);
+            this.textBoxMotaEzabatu.Location = new System.Drawing.Point(189, 55);
+            this.textBoxMotaEzabatu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxMotaEzabatu.Name = "textBoxMotaEzabatu";
             this.textBoxMotaEzabatu.ReadOnly = true;
-            this.textBoxMotaEzabatu.Size = new System.Drawing.Size(235, 31);
+            this.textBoxMotaEzabatu.Size = new System.Drawing.Size(158, 22);
             this.textBoxMotaEzabatu.TabIndex = 1;
             // 
             // textBoxIzenaEzabatu
             // 
-            this.textBoxIzenaEzabatu.Location = new System.Drawing.Point(6, 86);
+            this.textBoxIzenaEzabatu.Location = new System.Drawing.Point(4, 55);
+            this.textBoxIzenaEzabatu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxIzenaEzabatu.Name = "textBoxIzenaEzabatu";
             this.textBoxIzenaEzabatu.ReadOnly = true;
-            this.textBoxIzenaEzabatu.Size = new System.Drawing.Size(234, 31);
+            this.textBoxIzenaEzabatu.Size = new System.Drawing.Size(157, 22);
             this.textBoxIzenaEzabatu.TabIndex = 0;
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button4.Location = new System.Drawing.Point(12, 12);
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.button4.Location = new System.Drawing.Point(8, 8);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(181, 72);
+            this.button4.Size = new System.Drawing.Size(121, 46);
             this.button4.TabIndex = 9;
             this.button4.Text = "ATZERA";
             this.button4.UseVisualStyleBackColor = false;
@@ -606,15 +664,16 @@
             // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(2534, 1529);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(214)))), ((int)(((byte)(203)))));
+            this.ClientSize = new System.Drawing.Size(1585, 900);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form3";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
