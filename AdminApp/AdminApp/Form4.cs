@@ -33,9 +33,8 @@ namespace AdminApp
         {
             try
             {
-                // Configuración de NHibernate
                 var myConfiguration = new NHibernate.Cfg.Configuration();
-                myConfiguration.Configure(); // Esto lee el archivo de configuración app.config o hibernate.cfg.xml
+                myConfiguration.Configure(); 
                 var mySessionFactory = myConfiguration.BuildSessionFactory();
 
                 using (var mySession = mySessionFactory.OpenSession())
@@ -80,41 +79,37 @@ namespace AdminApp
 
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            // Asegúrate de que las columnas "Kantitatea" y "KantitateMinimoa" estén disponibles
+
             if (dataGridView1.Columns["kantitatea"] != null && dataGridView1.Columns["kantitateMinimoa"] != null)
             {
                 int kantitateaIndex = dataGridView1.Columns["kantitatea"].Index;
                 int kantitateMinimoaIndex = dataGridView1.Columns["kantitateMinimoa"].Index;
 
-                // Verificar si estamos formateando una fila completa (o una columna específica)
                 if (e.RowIndex >= 0 && e.ColumnIndex == kantitateaIndex)
                 {
                     var row = dataGridView1.Rows[e.RowIndex];
-
-                    // Obtener los valores de las columnas Kantitatea y KantitateMinimoa
                     int kantitatea = Convert.ToInt32(row.Cells[kantitateaIndex].Value);
                     int kantitateMinimoa = Convert.ToInt32(row.Cells[kantitateMinimoaIndex].Value);
 
-                    // Aplicar el color según las condiciones
                     if (kantitatea < kantitateMinimoa)
                     {
-                        row.DefaultCellStyle.BackColor = Color.LightCoral; // Fondo rojo
-                        row.DefaultCellStyle.ForeColor = Color.White; // Texto blanco
+                        row.DefaultCellStyle.BackColor = Color.LightCoral; 
+                        row.DefaultCellStyle.ForeColor = Color.White; 
                     }
                     else if (kantitatea >= kantitateMinimoa && kantitatea <= kantitateMinimoa + 3)
                     {
-                        row.DefaultCellStyle.BackColor = Color.LightSalmon; // Fondo naranja
-                        row.DefaultCellStyle.ForeColor = Color.Black; // Texto negro
+                        row.DefaultCellStyle.BackColor = Color.LightSalmon; 
+                        row.DefaultCellStyle.ForeColor = Color.Black; 
                     }
                     else if (kantitatea > kantitateMinimoa + 3 && kantitatea <= kantitateMinimoa + 7)
                     {
-                        row.DefaultCellStyle.BackColor = Color.LightGoldenrodYellow; // Fondo amarillo
-                        row.DefaultCellStyle.ForeColor = Color.Black; // Texto negro
+                        row.DefaultCellStyle.BackColor = Color.LightGoldenrodYellow;
+                        row.DefaultCellStyle.ForeColor = Color.Black; 
                     }
                     else
                     {
-                        row.DefaultCellStyle.BackColor = Color.LightGreen; // Fondo verde
-                        row.DefaultCellStyle.ForeColor = Color.Black; // Texto negro
+                        row.DefaultCellStyle.BackColor = Color.LightGreen; 
+                        row.DefaultCellStyle.ForeColor = Color.Black; 
                     }
                 }
             }
@@ -135,8 +130,8 @@ namespace AdminApp
             textBoxErosketaPrezioa.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             textBoxKantMin.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
             textBoxKantitatea.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            
-           
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -163,71 +158,23 @@ namespace AdminApp
             textBoxIzena.Clear();
             textBoxPrezioa.Clear();
             textBoxKantitatea.Clear();
-            textBoxErosketaPrezioa .Clear();
+            textBoxErosketaPrezioa.Clear();
             textBoxKantMin.Clear();
             textBoxErosketaKant.Clear();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
-            {
-                // Configuración de NHibernate
-                var myConfiguration = new NHibernate.Cfg.Configuration();
-                myConfiguration.Configure(); // Lee la configuración desde app.config o hibernate.cfg.xml
-                var mySessionFactory = myConfiguration.BuildSessionFactory();
-
-                using (var mySession = mySessionFactory.OpenSession())
-                {
-                    using (var transaction = mySession.BeginTransaction())
-                    {
-                        try
-                        {
-                            // Actualizar los productos en el carrito
-                            foreach (var producto in carrito)
-                            {
-                                // Buscar el producto en la base de datos por su nombre
-                                var productoExistente = mySession.QueryOver<Produktua>()
-                                    .Where(p => p.Izena == producto.Izena)
-                                    .SingleOrDefault();
-
-                                if (productoExistente != null)
-                                {
-                                    // Actualizamos la cantidad del producto
-                                    productoExistente.Kantitatea += producto.ErosketaKantitatea;
-
-                                    // Guardamos los cambios en la base de datos
-                                    mySession.SaveOrUpdate(productoExistente);
-                                }
-                            }
-
-                            // Confirmar la transacción
-                            transaction.Commit();
-
-                            MessageBox.Show("Compra realizada con éxito. Las cantidades han sido actualizadas.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                            // Limpiar el carrito y la lista visual
-                            carrito.Clear();
-                            listBoxCarrito.Items.Clear();
-
-                            taulaKargatu(); // Recargar la tabla
-                        }
-                        catch (Exception ex)
-                        {
-                            transaction.Rollback(); // Revierte la transacción en caso de error
-                            MessageBox.Show("Error al realizar la compra: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al inicializar NHibernate: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            Produktua.erosketaEgin(carrito, listBoxCarrito);
+            taulaKargatu();
         }
 
+        private void listBoxCarrito_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 
 }
+
 
