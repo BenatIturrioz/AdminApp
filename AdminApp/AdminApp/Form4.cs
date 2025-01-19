@@ -19,9 +19,7 @@ namespace AdminApp
         private ISessionFactory mySessionFactory;
         private ISession mySession;
         private int langileaId;
-
         private List<Produktua> carrito = new List<Produktua>();
-
         public Form4(int LangileaId)
         {
             InitializeComponent();
@@ -29,92 +27,11 @@ namespace AdminApp
             langileaId = LangileaId;
         }
 
-        private void taulaKargatu()
-        {
-            try
-            {
-                var myConfiguration = new NHibernate.Cfg.Configuration();
-                myConfiguration.Configure(); 
-                var mySessionFactory = myConfiguration.BuildSessionFactory();
-
-                using (var mySession = mySessionFactory.OpenSession())
-                {
-                    using (var transaction = mySession.BeginTransaction())
-                    {
-                        try
-                        {
-                            string hql = "FROM Produktua";
-                            var query = mySession.CreateQuery(hql);
-
-                            var produktuak = query.List<Produktua>();
-
-                            dataGridView1.DataSource = produktuak;
-
-                            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-                            dataGridView1.CellFormatting += dataGridView1_CellFormatting;
-
-                            transaction.Commit(); // Confirma la transacción
-                        }
-                        catch (Exception ex)
-                        {
-                            transaction.Rollback(); // Revierte la transacción en caso de error
-                            MessageBox.Show("Error: " + ex.Message);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-        }
-
-
         private void Form4_Load(object sender, EventArgs e)
         {
-            taulaKargatu();
+            Produktua.TaulaKargatu(dataGridView1);
         }
 
-
-        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-
-            if (dataGridView1.Columns["kantitatea"] != null && dataGridView1.Columns["kantitateMinimoa"] != null)
-            {
-                int kantitateaIndex = dataGridView1.Columns["kantitatea"].Index;
-                int kantitateMinimoaIndex = dataGridView1.Columns["kantitateMinimoa"].Index;
-
-                if (e.RowIndex >= 0 && e.ColumnIndex == kantitateaIndex)
-                {
-                    var row = dataGridView1.Rows[e.RowIndex];
-                    int kantitatea = Convert.ToInt32(row.Cells[kantitateaIndex].Value);
-                    int kantitateMinimoa = Convert.ToInt32(row.Cells[kantitateMinimoaIndex].Value);
-
-                    if (kantitatea < kantitateMinimoa)
-                    {
-                        row.DefaultCellStyle.BackColor = Color.LightCoral; 
-                        row.DefaultCellStyle.ForeColor = Color.White; 
-                    }
-                    else if (kantitatea >= kantitateMinimoa && kantitatea <= kantitateMinimoa + 3)
-                    {
-                        row.DefaultCellStyle.BackColor = Color.LightSalmon; 
-                        row.DefaultCellStyle.ForeColor = Color.Black; 
-                    }
-                    else if (kantitatea > kantitateMinimoa + 3 && kantitatea <= kantitateMinimoa + 7)
-                    {
-                        row.DefaultCellStyle.BackColor = Color.LightGoldenrodYellow;
-                        row.DefaultCellStyle.ForeColor = Color.Black; 
-                    }
-                    else
-                    {
-                        row.DefaultCellStyle.BackColor = Color.LightGreen; 
-                        row.DefaultCellStyle.ForeColor = Color.Black; 
-                    }
-                }
-            }
-
-        }
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -166,7 +83,7 @@ namespace AdminApp
         private void button2_Click(object sender, EventArgs e)
         {
             Produktua.erosketaEgin(carrito, listBoxCarrito);
-            taulaKargatu();
+            Produktua.TaulaKargatu(dataGridView1);
         }
 
         private void listBoxCarrito_SelectedIndexChanged(object sender, EventArgs e)

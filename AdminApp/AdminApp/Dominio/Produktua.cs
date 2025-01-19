@@ -3,6 +3,7 @@ using NHibernate;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -61,8 +62,6 @@ namespace AdminApp.Dominio
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
-
-
         public static void erosketaEgin(List<Produktua> carrito, ListBox listBoxCarrito)
         {
             try
@@ -82,38 +81,30 @@ namespace AdminApp.Dominio
                                 var productoExistente = mySession.QueryOver<Produktua>()
                                     .Where(p => p.Izena == producto.Izena)
                                     .SingleOrDefault();
-
                                 if (productoExistente != null)
                                 {
                                     productoExistente.Kantitatea += producto.ErosketaKantitatea;
-
                                     mySession.SaveOrUpdate(productoExistente);
                                 }
                             }
-
                             transaction.Commit();
-
-                            MessageBox.Show("Compra realizada con éxito. Las cantidades han sido actualizadas.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                            MessageBox.Show("Erosketa ongi suertatu da. Datuak eguneratuta.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             carrito.Clear();
                             listBoxCarrito.Items.Clear();
-
-                            
                         }
                         catch (Exception ex)
                         {
                             transaction.Rollback(); 
-                            MessageBox.Show("Error al realizar la compra: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Arazoa eorsketa egitean: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al inicializar NHibernate: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Arazoa NHibernate iniziatzean: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         public static void GehituProduktua(
             ISessionFactory sessionFactory,
             TextBox[] textBoxes,
@@ -249,6 +240,80 @@ namespace AdminApp.Dominio
                 {
                     transaction.Rollback();
                     MessageBox.Show("Errorea: " + ex.Message);
+                }
+            }
+        }
+        public static void TaulaKargatu(DataGridView dataGridView)
+        {
+            try
+            {
+                using (var session = NHibernateHelper.OpenSession())
+                {
+                    using (var transaction = session.BeginTransaction())
+                    {
+                        try
+                        {
+                            string hql = "FROM Produktua";
+                            var query = session.CreateQuery(hql);
+
+                            var produktuak = query.List<Produktua>();
+
+                            dataGridView.DataSource = produktuak;
+
+                            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                            dataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                            dataGridView.CellFormatting += (s, e) => CellFormattingHandler(dataGridView, e);
+
+                            transaction.Commit();
+                        }
+                        catch (Exception ex)
+                        {
+                            transaction.Rollback();
+                            MessageBox.Show("Error: " + ex.Message);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+
+        public static void CellFormattingHandler(DataGridView dataGridView, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dataGridView.Columns["kantitatea"] != null && dataGridView.Columns["kantitateMinimoa"] != null)
+            {
+                int kantitateaIndex = dataGridView.Columns["kantitatea"].Index;
+                int kantitateMinimoaIndex = dataGridView.Columns["kantitateMinimoa"].Index;
+
+                if (e.RowIndex >= 0 && e.ColumnIndex == kantitateaIndex)
+                {
+                    var row = dataGridView.Rows[e.RowIndex];
+                    int kantitatea = Convert.ToInt32(row.Cells[kantitateaIndex].Value);
+                    int kantitateMinimoa = Convert.ToInt32(row.Cells[kantitateMinimoaIndex].Value);
+
+                    if (kantitatea < kantitateMinimoa)
+                    {
+                        row.DefaultCellStyle.BackColor = Color.LightCoral;
+                        row.DefaultCellStyle.ForeColor = Color.White;
+                    }
+                    else if (kantitatea >= kantitateMinimoa && kantitatea <= kantitateMinimoa + 3)
+                    {
+                        row.DefaultCellStyle.BackColor = Color.LightSalmon;
+                        row.DefaultCellStyle.ForeColor = Color.Black;
+                    }
+                    else if (kantitatea > kantitateMinimoa + 3 && kantitatea <= kantitateMinimoa + 7)
+                    {
+                        row.DefaultCellStyle.BackColor = Color.LightGoldenrodYellow;
+                        row.DefaultCellStyle.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        row.DefaultCellStyle.BackColor = Color.LightGreen;
+                        row.DefaultCellStyle.ForeColor = Color.Black;
+                    }
                 }
             }
         }

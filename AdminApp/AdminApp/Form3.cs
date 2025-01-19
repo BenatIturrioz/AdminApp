@@ -84,7 +84,9 @@ namespace AdminApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.TextBox[] textBoxes = { textBoxIzenaGehitu, textBoxDeskribapenaGehitu, textBoxPrezioaGehitu, textBoxErosketaPrezioaGehitu, textBoxMotaGehitu, textBoxKantitateaGehitu, textBoxKantitateMinGehitu };
+            System.Windows.Forms.TextBox[] textBoxes = { textBoxIzenaGehitu, textBoxDeskribapenaGehitu, 
+            textBoxPrezioaGehitu, textBoxErosketaPrezioaGehitu, textBoxMotaGehitu, 
+            textBoxKantitateaGehitu, textBoxKantitateMinGehitu };
             try
             {
                 Produktua.GehituProduktua(NHibernateHelper.SessionFactory, textBoxes, erabiltzaileaId, dataGridView1);
@@ -112,7 +114,9 @@ namespace AdminApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.TextBox[] textBoxes = { textBoxIdEguneratu, textBoxIzenaEguneratu, textBoxDeskribapenaEguneratu, textBoxPrezioaEguneratu, textBoxErosketaPrezioaEguneratu, textBoxKantitateaEguneratu, textBoxKantitateMinEguneratu, textBoxMotaEguneratu };
+            System.Windows.Forms.TextBox[] textBoxes = { textBoxIdEguneratu, textBoxIzenaEguneratu, 
+            textBoxDeskribapenaEguneratu, textBoxPrezioaEguneratu, textBoxErosketaPrezioaEguneratu, 
+            textBoxKantitateaEguneratu, textBoxKantitateMinEguneratu, textBoxMotaEguneratu };
             try
             {
                 Produktua.EguneratuProduktua(NHibernateHelper.SessionFactory, textBoxes, erabiltzaileaId, dataGridView1);
