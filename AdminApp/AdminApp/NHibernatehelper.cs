@@ -20,7 +20,6 @@ namespace AdminApp
                 return _sessionFactory;
             }
         }
-
         public static ISession OpenSession()
         {
             return SessionFactory.OpenSession();

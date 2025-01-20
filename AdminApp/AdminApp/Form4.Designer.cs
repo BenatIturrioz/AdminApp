@@ -47,8 +47,10 @@
             this.listBoxCarrito = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
             this.SASKIA = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -65,7 +67,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
-            this.button4.Location = new System.Drawing.Point(12, 12);
+            this.button4.Location = new System.Drawing.Point(12, 1378);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(182, 72);
             this.button4.TabIndex = 10;
@@ -242,12 +244,23 @@
             this.SASKIA.TabIndex = 14;
             this.SASKIA.Text = "EROSKETA SASKIA";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AdminApp.Properties.Resources.Logo_Charlies_Nagusia_removebg_preview;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(306, 207);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(214)))), ((int)(((byte)(203)))));
             this.ClientSize = new System.Drawing.Size(2433, 1462);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.SASKIA);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.listBoxCarrito);
@@ -260,6 +273,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,5 +300,6 @@
         private System.Windows.Forms.ListBox listBoxCarrito;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label SASKIA;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

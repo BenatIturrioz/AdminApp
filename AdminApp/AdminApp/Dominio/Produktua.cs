@@ -105,11 +105,7 @@ namespace AdminApp.Dominio
                 MessageBox.Show("Arazoa NHibernate iniziatzean: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public static void GehituProduktua(
-            ISessionFactory sessionFactory,
-            TextBox[] textBoxes,
-            int erabiltzaileaId,
-            DataGridView dataGridView)
+        public static void GehituProduktua(ISessionFactory sessionFactory,TextBox[] textBoxes,int erabiltzaileaId,DataGridView dataGridView)
         {
             using (var session = sessionFactory.OpenSession())
             using (var transaction = session.BeginTransaction())
@@ -139,11 +135,7 @@ namespace AdminApp.Dominio
                 }
             }
         }
-        public static void HistorialaGorde(
-            ISessionFactory sessionFactory,
-            int produktuaId,
-            string ekintza,
-            int erabiltzaileaId)
+        public static void HistorialaGorde(ISessionFactory sessionFactory,int produktuaId,string ekintza,int erabiltzaileaId)
         {
             using (var session = sessionFactory.OpenSession())
             using (var transaction = session.BeginTransaction())
@@ -169,11 +161,7 @@ namespace AdminApp.Dominio
             }
         }
 
-        public static void EguneratuProduktua(
-            ISessionFactory sessionFactory,
-            TextBox[] textBoxes,
-            int erabiltzaileaId,
-            DataGridView dataGridView)
+        public static void EguneratuProduktua(ISessionFactory sessionFactory,TextBox[] textBoxes,int erabiltzaileaId,DataGridView dataGridView)
         {
             using (var session = sessionFactory.OpenSession())
             using (var transaction = session.BeginTransaction())
@@ -209,12 +197,7 @@ namespace AdminApp.Dominio
                 }
             }
         }
-
-        public static void EzabatuProduktua(
-            ISessionFactory sessionFactory,
-            int produktuaId,
-            int erabiltzaileaId,
-            DataGridView dataGridView)
+        public static void EzabatuProduktua(ISessionFactory sessionFactory,int produktuaId, int erabiltzaileaId,DataGridView dataGridView)
         {
             using (var session = sessionFactory.OpenSession())
             using (var transaction = session.BeginTransaction())
@@ -279,8 +262,6 @@ namespace AdminApp.Dominio
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
-
-
         public static void CellFormattingHandler(DataGridView dataGridView, DataGridViewCellFormattingEventArgs e)
         {
             if (dataGridView.Columns["kantitatea"] != null && dataGridView.Columns["kantitateMinimoa"] != null)
