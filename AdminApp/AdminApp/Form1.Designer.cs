@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.erabiltzaileaTextbox = new System.Windows.Forms.TextBox();
             this.pasahitzaTextbox = new System.Windows.Forms.TextBox();
             this.saioaHasiButton = new System.Windows.Forms.Button();
@@ -94,7 +93,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::AdminApp.Properties.Resources.Logo_Charlies_Nagusia_removebg_preview;
             this.pictureBox1.Location = new System.Drawing.Point(600, 49);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBox1.Name = "pictureBox1";

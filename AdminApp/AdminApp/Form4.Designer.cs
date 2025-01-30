@@ -67,7 +67,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
-            this.button4.Location = new System.Drawing.Point(12, 1378);
+            this.button4.Location = new System.Drawing.Point(12, 1322);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(182, 72);
             this.button4.TabIndex = 10;
@@ -259,7 +259,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(214)))), ((int)(((byte)(203)))));
-            this.ClientSize = new System.Drawing.Size(2433, 1462);
+            this.ClientSize = new System.Drawing.Size(2433, 1406);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.SASKIA);
             this.Controls.Add(this.button2);
